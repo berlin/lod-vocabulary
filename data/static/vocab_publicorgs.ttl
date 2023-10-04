@@ -1,0 +1,163 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix org: <https://www.w3.org/TR/vocab-org/#> .
+@prefix schema: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+@prefix berorgs: <https://berlin.github.io/lod-vocabulary/> .
+
+# Vocabulary Terms
+
+unit: a owl:Ontology ;
+    rdfs:label "Berliner Organisationsvokabular"@de ;
+    rdfs:label "Berlin Public Organisation Ontology"@en ;
+    rdfs:comment """Ein Vokabular zur Beschreibung von Einheiten der Berliner Verwaltung. 
+    Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte. """@de ;
+    rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;
+    void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/vocab_publicorgs.ttl> ;
+.
+
+# Organization Types
+
+unit:senateDepartment a owl:Class ;
+    rdfs:label "Senate Department"@en ;
+    rdfs:label "Senatsverwaltung"@de ;
+    rdfs:comment """Senate Department, equivalent to ministries on a state level"""@en ;
+    rdfs:comment """Senatsverwaltung, Ministerium des Landes Berlin"""@de ;
+    rdfs:subClassOf schema:GovernmentOrganization ;
+    rdfs:subClassOf schema:GovernmentOffice ;
+    rdfs:subClassOf org ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:senateChancellery a owl:Class ;
+    rdfs:label "Senate Chancellery"@en ;
+    rdfs:label "Senatskanzlei"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:GovernmentOrganization ;
+    rdfs:subClassOf schema:GovernmentOffice ;
+    rdfs:subClassOf org ;
+    rdfs:isDefinedBy unit: ;
+.
+
+
+unit:publicEnterprise a owl:Class ; 
+    rdfs:label "Public Enterprise"@en ;
+    rdfs:label "Öffentliches Unternehmen"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:subClassOf org ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:museum a owl:Class ; 
+    rdfs:label "Museum"@en ;
+    rdfs:label "Museum"@de ;
+    rdfs:comment """Museum"""@en ;
+    rdfs:comment """Museum"""@de ;
+    rdfs:subClassOf schema:museum ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:amt a owl:Class ;
+    rdfs:label "Senate Department"@en ;
+    rdfs:label "Amt"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:subClassOf org:headOf ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:bezirksAmt a owl:Class ;
+    rdfs:label "Municipality"@en ;
+    rdfs:label "Bezirksamt"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """"""@de ;
+    rdfs:subClassOf unit:amt ;
+    rdfs:subClassOf org ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:landesAmt a owl:Class ;
+    rdfs:label "State Office"@en ;
+    rdfs:label "Landesamt"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """"""@de ;
+    rdfs:subClassOf unit:amt ;
+    rdfs:subClassOf org ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:isDefinedBy unit: ;
+
+unit:landesStelle a owl:Class ;
+    rdfs:label "Senate Department"@en ;
+    rdfs:label "Landesstelle"@de ;
+    rdfs:comment """Senate Department, equivalent to ministries on a state level"""@en ;
+    rdfs:comment """Senatsverwaltung, Ministerium des Landes Berlin"""@de ;
+    schema:subjectOf <https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/> ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:subClassOf org:headOf ;
+    rdfs:isDefinedBy unit: ;
+.
+
+# Roles
+
+
+unit:senator a owl:Class ;
+    rdfs:label "senator"@en ;
+    rdfs:label "Senator:in"@de ;
+    rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
+    rdfs:comment """Senator:in der jeweiligen Senatsverwaltung."""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy unit: ;
+.
+
+(NB: we are using org:headOf to denote which Senate Department this person is Senator of?)
+
+unit:pressSpokesperson a owl:Class ;
+    rdfs:label "Press Spokesperson"@en ;
+    rdfs:label "Pressesprecher:in"@de ;
+    rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
+    rdfs:comment """Senator:in der jeweiligen Senatsverwaltung."""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:chiefofStaff a owl:Class ;
+    rdfs:label "Chief of Staff"@en ;
+    rdfs:label "Büroleiter:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:stateSec a owl:Class ;
+    rdfs:label "State Secretary"@en ;
+    rdfs:label "Staatssekretär:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:referentin a owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Referent:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy unit: ;
+.
+
+                SubOrganization
+                 "Fachdienst",
+                 "Fachbereich",
+                 "Referat",
+                 "Büro",
+                 "Abteilung",
+                 "Serviceeinheit",
