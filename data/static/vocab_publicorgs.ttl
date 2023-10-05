@@ -19,7 +19,7 @@ berorgs: a owl:Ontology ;
 
 # Organization Types
 
-berorgs:senateDepartment a owl:Class ;
+berorgs:senatsVerwaltung a owl:Class ;
     rdfs:label "Senate Department"@en ;
     rdfs:label "Senatsverwaltung"@de ;
     rdfs:comment """Senate Department, equivalent to ministries on a state level"""@en ;
@@ -30,7 +30,7 @@ berorgs:senateDepartment a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:senateChancellery a owl:Class ;
+berorgs:senatsKanzlei a owl:Class ;
     rdfs:label "Senate Chancellery"@en ;
     rdfs:label "Senatskanzlei"@de ;
     rdfs:comment """tbd"""@en ;
@@ -42,7 +42,7 @@ berorgs:senateChancellery a owl:Class ;
 .
 
 
-berorgs:publicEnterprise a owl:Class ; 
+berorgs:öffentlichesUnternehmen a owl:Class ; 
     rdfs:label "Public Enterprise"@en ;
     rdfs:label "Öffentliches Unternehmen"@de ;
     rdfs:comment """tbd"""@en ;
@@ -118,7 +118,7 @@ berorgs:senator a owl:Class ;
 
 (NB: we are using org:headOf to denote which Senate Department this person is Senator of?)
 
-berorgs:pressSpokesperson a owl:Class ;
+berorgs:presseSprecherin a owl:Class ;
     rdfs:label "Press Spokesperson"@en ;
     rdfs:label "Pressesprecher:in"@de ;
     rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
@@ -127,7 +127,7 @@ berorgs:pressSpokesperson a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:chiefofStaff a owl:Class ;
+berorgs:büroLeitung a owl:Class ;
     rdfs:label "Chief of Staff"@en ;
     rdfs:label "Büroleiter:in"@de ;
     rdfs:comment """tbd"""@en ;
@@ -136,7 +136,7 @@ berorgs:chiefofStaff a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:stateSec a owl:Class ;
+berorgs:staatssekretär a owl:Class ;
     rdfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
     rdfs:comment """tbd"""@en ;
