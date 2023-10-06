@@ -107,7 +107,7 @@ berorgs:landesStelle a owl:Class ;
 # Roles
 
 
-berorgs:senator a owl:Class ;
+berorgs:senatorin a owl:Class ;
     rdfs:label "senator"@en ;
     rdfs:label "Senator:in"@de ;
     rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
