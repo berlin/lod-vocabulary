@@ -162,3 +162,4 @@ berorgs:referentin a owl:Class ;
                  "Abteilung",
                  "Serviceeinheit",
 Stabsstelle
+Behördliche Datenschutzbeauftragte
