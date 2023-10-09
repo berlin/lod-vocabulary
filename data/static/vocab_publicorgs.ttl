@@ -161,3 +161,4 @@ berorgs:referentin a owl:Class ;
                  "Büro",
                  "Abteilung",
                  "Serviceeinheit",
+Stabsstelle
