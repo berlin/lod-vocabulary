@@ -163,3 +163,4 @@ berorgs:referentin a owl:Class ;
                  "Serviceeinheit",
 Stabsstelle
 Behördliche Datenschutzbeauftragte
+Ressort
