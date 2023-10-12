@@ -41,6 +41,7 @@ berorgs:senatskanzlei a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
+
 berorgs:öffentlichesUnternehmen a owl:Class ; 
     rdfs:label "Public Enterprise"@en ;
     rdfs:label "Öffentliches Unternehmen"@de ;
@@ -55,7 +56,7 @@ berorgs:museum a owl:Class ;
     rdfs:label "Museum"@de ;
     rdfs:comment """Museum"""@en ;
     rdfs:comment """Museum"""@de ;
-    rdfs:subClassOf schema:Museum ;
+    rdfs:subClassOf schema:museum ;
     rdfs:subClassOf schema:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -105,14 +106,89 @@ berorgs:landesstelle a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:leittelle a owl:Class ;
-    rdfs:label "Senate Department"@en ;
-    rdfs:label "Leitstelle"@de ;
+# Roles
+
+berorgs:senatorIn a owl:Class ;
+    rdfs:label "senator"@en ;
+    rdfs:label "Senator:in"@de ;
+    rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
+    rdfs:comment """Senator:in der jeweiligen Senatsverwaltung."""@de ;
+    rdfs:subClassOf schema:Person ;
+    org:headOf berorgs:senatsverwaltung ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs: abteilungsleiterIn owl:Class ;
+    rdfs:label "Division Head"@en ;
+    rdfs:label "Abteilungsleiter:in"@de ;
     rdfs:comment """"""@en ;
-    rdfs:comment """Leitstelle"""@de ;
-    rdfs:subClassOf schema:GovernmentOrganization ;
-    rdfs:subClassOf schema:GovernmentOffice ; 
-    rdfs:subClassOf org:Organization ; 
+    rdfs:comment """Abteilungsleiter:in"""@de ;
+    rdfs:subClassOf schema:Person ;
+    org:headOf berorgs:abteilung ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs: referatsleiterIn owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Referatsleiter:in"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """Referatsleiter:in"""@de ;
+    rdfs:subClassOf schema:Person ;
+    org:headOf berorgs:referat ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:pressesprecherIn a owl:Class ;
+    rdfs:label "Press Spokesperson"@en ;
+    rdfs:label "Pressesprecher:in"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """Pressesprecher:in der jeweiligen Organisation"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:datenschutzbeauftragte a owl:Class ;
+    rdfs:label "Data Privacy Officer"@en ;
+    rdfs:label "Behördliche Datenschutzbeauftragte"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:büroLeiterIn a owl:Class ;
+    rdfs:label "Chief of Staff"@en ;
+    rdfs:label "Büroleiter:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:staatssekretärIn a owl:Class ;
+    rdfs:label "State Secretary"@en ;
+    rdfs:label "Staatssekretär:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:referentIn a owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Referent:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:fachdienst a owl:Class
+    rdfs:label "tbd"@en ;
+    rdfs:label "Fachdienst"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
@@ -196,95 +272,5 @@ berorgs:justitiariat a owl:Class
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
-
-berorgs:fachdienst a owl:Class
-    rdfs:label "tbd"@en ;
-    rdfs:label "Fachdienst"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-
-# Roles
-
-berorgs:senatorIn a owl:Class ;
-    rdfs:label "senator"@en ;
-    rdfs:label "Senator:in"@de ;
-    rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
-    rdfs:comment """Senator:in der jeweiligen Senatsverwaltung."""@de ;
-    rdfs:subClassOf schema:Person ;
-    org:headOf berorgs:senatsverwaltung ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs: abteilungsleiterIn owl:Class ;
-    rdfs:label "Division Head"@en ;
-    rdfs:label "Abteilungsleiter:in"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Abteilungsleiter:in"""@de ;
-    rdfs:subClassOf schema:Person ;
-    org:headOf berorgs:abteilung ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs: referatsleiterIn owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Referatsleiter:in"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Referatsleiter:in"""@de ;
-    rdfs:subClassOf schema:Person ;
-    org:headOf berorgs:referat ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:pressesprecherIn a owl:Class ;
-    rdfs:label "Press Spokesperson"@en ;
-    rdfs:label "Pressesprecher:in"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Pressesprecher:in der jeweiligen Organisation"""@de ;
-    rdfs:subClassOf schema:Person ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:datenschutzbeauftragte a owl:Class ;
-    rdfs:label "Data Privacy Officer"@en ;
-    rdfs:label "Behördliche Datenschutzbeauftragte"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """"""@de ;
-    rdfs:subClassOf schema:Person ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:büroLeiterIn a owl:Class ;
-    rdfs:label "Chief of Staff"@en ;
-    rdfs:label "Büroleiter:in"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf schema:Person ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:staatssekretärIn a owl:Class ;
-    rdfs:label "State Secretary"@en ;
-    rdfs:label "Staatssekretär:in"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf schema:Person ;
-    schema:memberOf berorgs:senatsverwaltung ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:referentIn a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Referent:in"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf schema:Person ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-
 
 
