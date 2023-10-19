@@ -41,7 +41,7 @@ berorgs:senatskanzlei a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:öffentlichesUnternehmen a owl:Class ; 
+berorgs:oeffentlichesUnternehmen a owl:Class ; 
     rdfs:label "Public Enterprise"@en ;
     rdfs:label "Öffentliches Unternehmen"@de ;
     rdfs:comment """tbd"""@en ;
@@ -105,8 +105,8 @@ berorgs:landesstelle a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:leittelle a owl:Class ;
-    rdfs:label "Senate Department"@en ;
+berorgs:leitstelle a owl:Class ;
+    rdfs:label "tbd"@en ;
     rdfs:label "Leitstelle"@de ;
     rdfs:comment """"""@en ;
     rdfs:comment """Leitstelle"""@de ;
@@ -170,7 +170,7 @@ berorgs:stabsstelle a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:büro a owl:Class
+berorgs:buero a owl:Class
     rdfs:label "tbd"@en ;
     rdfs:label "Büro"@de ;
     rdfs:comment """tbd"""@en ;
@@ -248,16 +248,16 @@ berorgs:pressesprecherIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:datenschutzbeauftragte a owl:Class ;
+berorgs:datenschutzbeauftragteR a owl:Class ;
     rdfs:label "Data Privacy Officer"@en ;
-    rdfs:label "Behördliche Datenschutzbeauftragte"@de ;
+    rdfs:label "Behördliche Datenschutzbeauftragte:r"@de ;
     rdfs:comment """"""@en ;
     rdfs:comment """"""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:büroLeiterIn a owl:Class ;
+berorgs:bueroleiterIn a owl:Class ;
     rdfs:label "Chief of Staff"@en ;
     rdfs:label "Büroleiter:in"@de ;
     rdfs:comment """tbd"""@en ;
@@ -266,7 +266,7 @@ berorgs:büroLeiterIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:staatssekretärIn a owl:Class ;
+berorgs:staatssekretaerIn a owl:Class ;
     rdfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
     rdfs:comment """tbd"""@en ;
