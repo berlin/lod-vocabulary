@@ -5,6 +5,14 @@ It uses the [Jekyll](https://jekyllrb.com) static site generator with the [Jekyl
 The project contains a number of basic page templates to produce a generic website.
 By adding additional templates for specific kinds of RDF resources, LOD-SG can be the starting point for developing tailor-made sites for individual datasets.
 
+
+## RDF Tools
+
+# vocab validator
+http://ttl.summerofcode.be/
+# voc viewer 
+https://service.tib.eu/webvowl/
+
 ## Features
 
 ### Skeleton Structure 
