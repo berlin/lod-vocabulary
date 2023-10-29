@@ -14,7 +14,6 @@ berorgs: a owl:Ontology ;
     rdfs:comment """Ein Vokabular zur Beschreibung von Einheiten der Berliner Verwaltung. 
     Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte. """@de ;
     rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;
-    void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/vocab_publicorgs.ttl> ;
 .
 
 # Organization Types
@@ -94,6 +93,7 @@ berorgs:landesamt a owl:Class ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ; 
     rdfs:isDefinedBy berorgs: ;
+.
 
 berorgs:landesstelle a owl:Class ;
     rdfs:label "Senate Department"@en ;
@@ -118,7 +118,7 @@ berorgs:senatorIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs: abteilungsleiterIn owl:Class ;
+berorgs:abteilungsleiterIn a owl:Class ;
     rdfs:label "Division Head"@en ;
     rdfs:label "Abteilungsleiter:in"@de ;
     rdfs:comment """"""@en ;
@@ -128,7 +128,7 @@ berorgs: abteilungsleiterIn owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs: referatsleiterIn owl:Class ;
+berorgs:referatsleiterIn a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referatsleiter:in"@de ;
     rdfs:comment """"""@en ;
@@ -183,7 +183,7 @@ berorgs:referentIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:fachdienst a owl:Class
+berorgs:fachdienst a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Fachdienst"@de ;
     rdfs:comment """tbd"""@en ;
@@ -192,7 +192,7 @@ berorgs:fachdienst a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:fachbereich a owl:Class
+berorgs:fachbereich a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Fachbereich"@de ;
     rdfs:comment """tbd"""@en ;
@@ -201,7 +201,7 @@ berorgs:fachbereich a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:referat a owl:Class
+berorgs:referat a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referat"@de ;
     rdfs:comment """tbd"""@en ;
@@ -210,7 +210,7 @@ berorgs:referat a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:abteilung a owl:Class
+berorgs:abteilung a owl:Class ;
     rdfs:label "Division"@en ;
     rdfs:label "Abteilung"@de ;
     rdfs:comment """tbd"""@en ;
@@ -219,7 +219,7 @@ berorgs:abteilung a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:serviceeinheit a owl:Class
+berorgs:serviceeinheit a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Serviceeinheit"@de ;
     rdfs:comment """tbd"""@en ;
@@ -228,7 +228,7 @@ berorgs:serviceeinheit a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:organisationseinheit a owl:Class
+berorgs:organisationseinheit a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Organisationseinheit"@de ;
     rdfs:comment """tbd"""@en ;
@@ -237,7 +237,7 @@ berorgs:organisationseinheit a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:stabsstelle a owl:Class
+berorgs:stabsstelle a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Stabsstelle"@de ;
     rdfs:comment """tbd"""@en ;
@@ -246,7 +246,7 @@ berorgs:stabsstelle a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:büro a owl:Class
+berorgs:büro a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Büro"@de ;
     rdfs:comment """tbd"""@en ;
@@ -255,7 +255,7 @@ berorgs:büro a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:ressort a owl:Class
+berorgs:ressort a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Ressort"@de ;
     rdfs:comment """tbd"""@en ;
@@ -264,7 +264,7 @@ berorgs:ressort a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:justitiariat a owl:Class
+berorgs:justitiariat a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Justitiariat"@de ;
     rdfs:comment """tbd"""@en ;
@@ -272,5 +272,3 @@ berorgs:justitiariat a owl:Class
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
-
-
