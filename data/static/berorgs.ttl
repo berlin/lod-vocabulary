@@ -118,21 +118,21 @@ berorgs:senatorIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:abteilungsleiterIn a owl:Class ;
+berorgs:abteilungsleitung a owl:Class ;
     rdfs:label "Division Head"@en ;
-    rdfs:label "Abteilungsleiter:in"@de ;
+    rdfs:label "Abteilungsleitung"@de ;
     rdfs:comment """"""@en ;
-    rdfs:comment """Abteilungsleiter:in"""@de ;
+    rdfs:comment """Abteilungsleitung"""@de ;
     rdfs:subClassOf schema:Person ;
     org:headOf berorgs:abteilung ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:referatsleiterIn a owl:Class ;
+berorgs:referatsleitung a owl:Class ;
     rdfs:label "tbd"@en ;
-    rdfs:label "Referatsleiter:in"@de ;
+    rdfs:label "Referatsleitung"@de ;
     rdfs:comment """"""@en ;
-    rdfs:comment """Referatsleiter:in"""@de ;
+    rdfs:comment """Referatsleitung"""@de ;
     rdfs:subClassOf schema:Person ;
     org:headOf berorgs:referat ;
     rdfs:isDefinedBy berorgs: ;
@@ -156,9 +156,9 @@ berorgs:datenschutzbeauftragte a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:büroLeiterIn a owl:Class ;
+berorgs:büroLeitung a owl:Class ;
     rdfs:label "Chief of Staff"@en ;
-    rdfs:label "Büroleiter:in"@de ;
+    rdfs:label "Büroleitung"@de ;
     rdfs:comment """tbd"""@en ;
     rdfs:comment """tbd"""@de ;
     rdfs:subClassOf schema:Person ;
