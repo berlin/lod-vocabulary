@@ -48,7 +48,7 @@ rdf_prefix_path: "conf/prefixes.sparql"
                 <tr>
                   <td>Veröffentlichende Stelle:</td>
                   <td>
-                    <a href="{{ publisher }}">
+                    <a href="{{ publisher.page_url | relative_url }}">
                       {{ publisher | rdf_property: "schema:name" }}
                     </a>
                   </td>
@@ -73,6 +73,15 @@ rdf_prefix_path: "conf/prefixes.sparql"
                     <a href="{{ data_dump }}">
                       {{ data_dump }}
                     </a>
+                  </td>
+                </tr>
+              {% endfor %}
+              {% assign root_resources = page.rdf | rdf_property: "void:rootResource", nil, true %}
+              {% for resource in root_resources %}
+                <tr>
+                  <td>Einstiegsressource:</td>
+                  <td>
+                    {% include prefix_url.html iri=resource.iri %}
                   </td>
                 </tr>
               {% endfor %}

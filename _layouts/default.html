@@ -4,13 +4,7 @@ rdf_prefix_path: "conf/prefixes.sparql"
 {% assign page_link = page.url | absolute_url | replace: '.html', '' %}
 {% assign title = page.rdf | rdf_property: "rdfs:label", "de"  %}
 {% unless title %}
-  {% assign title = page.rdf | rdf_property: "rdfs:label"  %}
-{% endunless %}
-{% unless title %}
-  {% assign title = page.rdf | rdf_property: "schema:name", "de" %}
-{% endunless %}
-{% unless title %}
-  {% assign title = page.rdf | rdf_property: "schema:name" %}
+  {% assign title = page.rdf | rdf_property: "schema:name", "de"  %}
 {% endunless %}
 {% unless title %}
   {% assign title = "Unknown" %}
