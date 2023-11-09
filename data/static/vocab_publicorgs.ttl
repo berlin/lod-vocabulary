@@ -3,6 +3,7 @@
 @prefix org: <https://www.w3.org/TR/vocab-org/#> .
 @prefix schema: <https://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 @prefix berorgs: <https://berlin.github.io/lod-vocabulary/> .
 
@@ -17,9 +18,25 @@ berorgs: a owl:Ontology ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/vocab_publicorgs.ttl> ;
 .
 
+berorgs:organigramm a owl:Class ;
+    rdfs:label "Das Organigramm wird hier angelegt"@de ;
+    rdfs:label ""@en ;
+    dcterms:title ;
+    dcterms:created ;
+    dcterms:creator ;
+    berorgs:contains ;
+.
+
+berorgs:contains a owl:property ;
+    rdfs:label "um die jeweilige Organisation im Organigramm abzubilden"@de ;
+    rdfs:label ""@en;
+.
+
+
+
 # Organization Types
 
-berorgs:senatsverwaltung a owl:Class ;
+berorgs:Senatsverwaltung a owl:Class ;
     rdfs:label "Senate Department"@en ;
     rdfs:label "Senatsverwaltung"@de ;
     rdfs:comment """Senate Department, equivalent to ministries on a state level"""@en ;
@@ -30,7 +47,7 @@ berorgs:senatsverwaltung a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:senatskanzlei a owl:Class ;
+berorgs:Senatskanzlei a owl:Class ;
     rdfs:label "Senate Chancellery"@en ;
     rdfs:label "Senatskanzlei"@de ;
     rdfs:comment """tbd"""@en ;
@@ -41,7 +58,7 @@ berorgs:senatskanzlei a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:oeffentlichesUnternehmen a owl:Class ; 
+berorgs:OeffentlichesUnternehmen a owl:Class ; 
     rdfs:label "Public Enterprise"@en ;
     rdfs:label "Öffentliches Unternehmen"@de ;
     rdfs:comment """tbd"""@en ;
@@ -50,7 +67,7 @@ berorgs:oeffentlichesUnternehmen a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:museum a owl:Class ; 
+berorgs:Museum a owl:Class ; 
     rdfs:label "Museum"@en ;
     rdfs:label "Museum"@de ;
     rdfs:comment """Museum"""@en ;
@@ -60,7 +77,7 @@ berorgs:museum a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:amt a owl:Class ;
+berorgs:Amt a owl:Class ;
     rdfs:label "Office"@en ;
     rdfs:label "Amt"@de ;
     rdfs:comment """"""@en ;
@@ -71,7 +88,7 @@ berorgs:amt a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:bezirksamt a owl:Class ;
+berorgs:Bezirksamt a owl:Class ;
     rdfs:label "District Office"@en ;
     rdfs:label "Bezirksamt"@de ;
     rdfs:comment """"""@en ;
@@ -83,7 +100,7 @@ berorgs:bezirksamt a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:landesamt a owl:Class ;
+berorgs:Landesamt a owl:Class ;
     rdfs:label "State Office"@en ;
     rdfs:label "Landesamt"@de ;
     rdfs:comment """"""@en ;
@@ -94,7 +111,7 @@ berorgs:landesamt a owl:Class ;
     rdfs:subClassOf schema:GovernmentOffice ; 
     rdfs:isDefinedBy berorgs: ;
 
-berorgs:landesstelle a owl:Class ;
+berorgs:Landesstelle a owl:Class ;
     rdfs:label "Senate Department"@en ;
     rdfs:label "Landesstelle"@de ;
     rdfs:comment """"""@en ;
@@ -105,7 +122,7 @@ berorgs:landesstelle a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:leitstelle a owl:Class ;
+berorgs:Leitstelle a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Leitstelle"@de ;
     rdfs:comment """"""@en ;
@@ -116,7 +133,7 @@ berorgs:leitstelle a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:fachbereich a owl:Class
+berorgs:Fachbereich a owl:Class
     rdfs:label "tbd"@en ;
     rdfs:label "Fachbereich"@de ;
     rdfs:comment """tbd"""@en ;
@@ -125,7 +142,7 @@ berorgs:fachbereich a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:referat a owl:Class
+berorgs:Referat a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referat"@de ;
     rdfs:comment """tbd"""@en ;
@@ -134,7 +151,7 @@ berorgs:referat a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:abteilung a owl:Class
+berorgs:Abteilung a owl:Class ;
     rdfs:label "Division"@en ;
     rdfs:label "Abteilung"@de ;
     rdfs:comment """tbd"""@en ;
@@ -143,7 +160,7 @@ berorgs:abteilung a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:serviceeinheit a owl:Class
+berorgs:Serviceeinheit a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Serviceeinheit"@de ;
     rdfs:comment """tbd"""@en ;
@@ -152,7 +169,7 @@ berorgs:serviceeinheit a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:organisationseinheit a owl:Class
+berorgs:Organisationseinheit a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Organisationseinheit"@de ;
     rdfs:comment """tbd"""@en ;
@@ -161,7 +178,16 @@ berorgs:organisationseinheit a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:stabsstelle a owl:Class
+berorgs:NachgeordneteEinrichtung a owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Nachgeordnete Einrichtung"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf org:Organization ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:Stabsstelle a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Stabsstelle"@de ;
     rdfs:comment """tbd"""@en ;
@@ -169,8 +195,16 @@ berorgs:stabsstelle a owl:Class
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
+berorgs:Leitungsstab a owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Leitungsstab"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf org:Organization ;
+    rdfs:isDefinedBy berorgs: ;
+.
 
-berorgs:buero a owl:Class
+berorgs:Buero a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Büro"@de ;
     rdfs:comment """tbd"""@en ;
@@ -179,7 +213,7 @@ berorgs:buero a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:ressort a owl:Class
+berorgs:Ressort a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Ressort"@de ;
     rdfs:comment """tbd"""@en ;
@@ -188,7 +222,7 @@ berorgs:ressort a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:justitiariat a owl:Class
+berorgs:Justitiariat a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Justitiariat"@de ;
     rdfs:comment """tbd"""@en ;
@@ -197,7 +231,7 @@ berorgs:justitiariat a owl:Class
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:fachdienst a owl:Class
+berorgs:Fachdienst a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Fachdienst"@de ;
     rdfs:comment """tbd"""@en ;
@@ -209,7 +243,7 @@ berorgs:fachdienst a owl:Class
 
 # Roles
 
-berorgs:senatorIn a owl:Class ;
+berorgs:SenatorIn a owl:Class ;
     rdfs:label "senator"@en ;
     rdfs:label "Senator:in"@de ;
     rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
@@ -219,7 +253,7 @@ berorgs:senatorIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs: abteilungsleiterIn owl:Class ;
+berorgs:AbteilungsleiterIn a owl:Class ;
     rdfs:label "Division Head"@en ;
     rdfs:label "Abteilungsleiter:in"@de ;
     rdfs:comment """"""@en ;
@@ -229,7 +263,7 @@ berorgs: abteilungsleiterIn owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs: referatsleiterIn owl:Class ;
+berorgs:ReferatsleiterIn a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referatsleiter:in"@de ;
     rdfs:comment """"""@en ;
@@ -239,7 +273,16 @@ berorgs: referatsleiterIn owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:pressesprecherIn a owl:Class ;
+berorgs:LeitungDesLeitungsstabs a owl:Class ;
+    rdfs:label "tbd"@en ;
+    rdfs:label "Leitung des Leitungsstabs"@de ;
+    rdfs:comment """"""@en ;
+    rdfs:comment """LdL"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:PressesprecherIn a owl:Class ;
     rdfs:label "Press Spokesperson"@en ;
     rdfs:label "Pressesprecher:in"@de ;
     rdfs:comment """"""@en ;
@@ -248,7 +291,7 @@ berorgs:pressesprecherIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:datenschutzbeauftragteR a owl:Class ;
+berorgs:DatenschutzbeauftragteR a owl:Class ;
     rdfs:label "Data Privacy Officer"@en ;
     rdfs:label "Behördliche Datenschutzbeauftragte:r"@de ;
     rdfs:comment """"""@en ;
@@ -257,7 +300,7 @@ berorgs:datenschutzbeauftragteR a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:bueroleiterIn a owl:Class ;
+berorgs:BueroleiterIn a owl:Class ;
     rdfs:label "Chief of Staff"@en ;
     rdfs:label "Büroleiter:in"@de ;
     rdfs:comment """tbd"""@en ;
@@ -266,7 +309,7 @@ berorgs:bueroleiterIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:staatssekretaerIn a owl:Class ;
+berorgs:StaatssekretaerIn a owl:Class ;
     rdfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
     rdfs:comment """tbd"""@en ;
@@ -276,7 +319,7 @@ berorgs:staatssekretaerIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:referentIn a owl:Class ;
+berorgs:ReferentIn a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referent:in"@de ;
     rdfs:comment """tbd"""@en ;
