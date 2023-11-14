@@ -32,8 +32,6 @@ berorgs:contains a owl:property ;
     rdfs:label ""@en;
 .
 
-
-
 # Organization Types
 
 berorgs:Senatsverwaltung a owl:Class ;
