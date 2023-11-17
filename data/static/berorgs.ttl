@@ -18,7 +18,7 @@ berorgs: a owl:Ontology ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/vocab_publicorgs.ttl> ;
 .
 
-berorgs:organigramm a owl:Class ;
+berorgs:Organigramm a owl:Class ;
     rdfs:label "Das Organigramm wird hier angelegt"@de ;
     rdfs:label ""@en ;
     dcterms:title ;
