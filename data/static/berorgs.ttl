@@ -317,6 +317,15 @@ berorgs:StaatssekretaerIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
+berorgs:SekretaerIn a owl:Class ;
+    rdfs:label "Secretary"@en ;
+    rdfs:label "Sekretär:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
 berorgs:ReferentIn a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Referent:in"@de ;
