@@ -5,7 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-@prefix berorgs: <https://berlin.github.io/lod-vocabulary/> .
+@prefix berorgs: <https://berlin.github.io/lod-vocabulary/#> .
 
 # Vocabulary Terms
 
@@ -17,7 +17,7 @@ berorgs: a owl:Ontology ;
     rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;
 .
 
-berorgs:organigramm a owl:Class ;
+berorgs:Organigramm a owl:Class ;
     rdfs:label "Das Organigramm wird hier angelegt"@de ;
     rdfs:label ""@en ;
     dcterms:title ;
@@ -313,6 +313,15 @@ berorgs:StaatssekretaerIn a owl:Class ;
     rdfs:comment """tbd"""@de ;
     rdfs:subClassOf schema:Person ;
     schema:memberOf berorgs:senatsverwaltung ;
+    rdfs:isDefinedBy berorgs: ;
+.
+
+berorgs:SekretaerIn a owl:Class ;
+    rdfs:label "Secretary"@en ;
+    rdfs:label "Sekretär:in"@de ;
+    rdfs:comment """tbd"""@en ;
+    rdfs:comment """tbd"""@de ;
+    rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
 
