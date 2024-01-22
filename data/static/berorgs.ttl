@@ -4,7 +4,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix berorgs: <https://berlin.github.io/lod-vocabulary/> .
 
 # Vocabulary Terms
@@ -21,10 +21,10 @@ berorgs: a owl:Ontology ;
 berorgs:organigramm a owl:Class ;
     rdfs:label "Das Organigramm wird hier angelegt"@de ;
     rdfs:label ""@en ;
-    dcterms:title ;
-    dcterms:created ;
-    dcterms:creator ;
-    berorgs:contains ;
+    # dcterms:title ;
+    # dcterms:created ;
+    # dcterms:creator ;
+    # berorgs:contains ;
 .
 
 berorgs:contains a owl:property ;
@@ -132,7 +132,7 @@ berorgs:Leitstelle a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Fachbereich a owl:Class
+berorgs:Fachbereich a owl:Class ;
     rdfs:label "tbd"@en ;
     rdfs:label "Fachbereich"@de ;
     rdfs:comment """tbd"""@en ;
