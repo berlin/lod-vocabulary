@@ -48,22 +48,22 @@ berorgs:Senatsverwaltung a owl:Class ;
 berorgs:Senatskanzlei a owl:Class ;
     rdfs:label "Senate Chancellery"@en ;
     rdfs:label "Senatskanzlei"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """The Senate Chancellery represents the administrative office of the Senate in Berlin."""@en ;
+    rdfs:comment """Die Senatskanzlei repräsentiert das Verwaltungsamt des Senats in Berlin."""@de ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
-.
+    .
 
 berorgs:OeffentlichesUnternehmen a owl:Class ; 
     rdfs:label "Public Enterprise"@en ;
     rdfs:label "Öffentliches Unternehmen"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A public enterprise refers to an organization that is owned or controlled by the government and operates for the benefit of the public."""@en ;
+    rdfs:comment """Ein öffentliches Unternehmen bezeichnet eine Organisation, die im Besitz oder unter Kontrolle der Regierung steht und zum Nutzen der Öffentlichkeit tätig ist."""@de ;
     rdfs:subClassOf schema:Organization ;
     rdfs:isDefinedBy berorgs: ;
-.
+    .
 
 berorgs:Museum a owl:Class ; 
     rdfs:label "Museum"@en ;
@@ -78,8 +78,8 @@ berorgs:Museum a owl:Class ;
 berorgs:Amt a owl:Class ;
     rdfs:label "Office"@en ;
     rdfs:label "Amt"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """"""@de ;
+    rdfs:comment """Describes a government agency tasked with a particular  on a state or municipal level."""@en ;
+    rdfs:comment """Ein Amt beschreibt eine Behörde innerhalb einer Landes- oder Bezirksregierung."""@de ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ;
     rdfs:subClassOf org:Organization ;
@@ -89,8 +89,8 @@ berorgs:Amt a owl:Class ;
 berorgs:Bezirksamt a owl:Class ;
     rdfs:label "District Office"@en ;
     rdfs:label "Bezirksamt"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """"""@de ;
+    rdfs:comment """The District Office represents the local administrative authority within a specific district."""@en ;
+    rdfs:comment """Das Bezirksamt repräsentiert die örtliche Verwaltungsbehörde innerhalb eines bestimmten Bezirks."""@de ;
     rdfs:subClassOf berorgs:amt ;
     rdfs:subClassOf org:Organization ;
     rdfs:subClassOf schema:GovernmentOrganization ;
@@ -101,20 +101,20 @@ berorgs:Bezirksamt a owl:Class ;
 berorgs:Landesamt a owl:Class ;
     rdfs:label "State Office"@en ;
     rdfs:label "Landesamt"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """"""@de ;
+    rdfs:comment """The State Office represents a higher administrative authority at the state level."""@en ;
+    rdfs:comment """Das Landesamt repräsentiert eine höhere Verwaltungsbehörde auf Landesebene."""@de ;
     rdfs:subClassOf berorgs:amt ;
     rdfs:subClassOf org:Organization ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ; 
     rdfs:isDefinedBy berorgs: ;
-    .
+.
 
 berorgs:Landesstelle a owl:Class ;
     rdfs:label "Senate Department"@en ;
     rdfs:label "Landesstelle"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Landesstelle"""@de ;
+    rdfs:comment """A Landesstelle refers to a department or office within a state administration."""@en ;
+    rdfs:comment """Landesstelle bezeichnet eine Abteilung oder Büro innerhalb einer Landesverwaltung."""@de ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ; 
     rdfs:subClassOf org:Organization ; 
@@ -122,10 +122,10 @@ berorgs:Landesstelle a owl:Class ;
 .
 
 berorgs:Leitstelle a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Control Center"@en ;
     rdfs:label "Leitstelle"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Leitstelle"""@de ;
+    rdfs:comment """A Leitstelle is a central coordination and control center within the administration."""@en ;
+    rdfs:comment """Eine Leitstelle ist ein zentrales Koordinations- und Kontrollzentrum innerhalb der Verwaltung."""@de ;
     rdfs:subClassOf schema:GovernmentOrganization ;
     rdfs:subClassOf schema:GovernmentOffice ; 
     rdfs:subClassOf org:Organization ; 
@@ -133,19 +133,19 @@ berorgs:Leitstelle a owl:Class ;
 .
 
 berorgs:Fachbereich a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Department Section"@en ;
     rdfs:label "Fachbereich"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Fachbereich represents a specialized department or area of expertise within the organization."""@en ;
+    rdfs:comment """Ein Fachbereich repräsentiert eine spezialisierte Abteilung oder Fachgebiet innerhalb der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Referat a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Department"@en ;
     rdfs:label "Referat"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Referat is a specific section or division within a department, focusing on a particular subject."""@en ;
+    rdfs:comment """Ein Referat ist eine spezifische Abteilung oder Sektion innerhalb eines Fachbereichs, die sich auf ein bestimmtes Thema konzentriert."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -153,88 +153,89 @@ berorgs:Referat a owl:Class ;
 berorgs:Abteilung a owl:Class ;
     rdfs:label "Division"@en ;
     rdfs:label "Abteilung"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """An Abteilung represents a larger administrative division or unit within the organization."""@en ;
+    rdfs:comment """Eine Abteilung repräsentiert eine größere Verwaltungseinheit innerhalb der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Serviceeinheit a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Service Unit"@en ;
     rdfs:label "Serviceeinheit"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Service Unit is a unit within the organization dedicated to providing specific services."""@en ;
+    rdfs:comment """Eine Serviceeinheit ist eine Einheit innerhalb der Organisation, die sich auf die Erbringung bestimmter Dienstleistungen spezialisiert hat."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Organisationseinheit a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Organizational Unit"@en ;
     rdfs:label "Organisationseinheit"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """An Organizational Unit represents a general organizational unit within the structure of the entity."""@en ;
+    rdfs:comment """Eine Organisationseinheit repräsentiert eine allgemeine organisatorische Einheit innerhalb der Struktur der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:NachgeordneteEinrichtung a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Subordinate Institution"@en ;
     rdfs:label "Nachgeordnete Einrichtung"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Subordinate Institution refers to an institution or entity that is subordinate to the main organization."""@en ;
+    rdfs:comment """Nachgeordnete Einrichtung bezeichnet eine Institution oder Einrichtung, die der Hauptorganisation untergeordnet ist."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Stabsstelle a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Staff Unit"@en ;
     rdfs:label "Stabsstelle"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Stabsstelle refers to a specialized unit within the organization that provides support and advisory services to the management or leadership."""@en ;
+    rdfs:comment """Eine Stabsstelle bezeichnet eine spezialisierte Einheit innerhalb der Organisation, die Unterstützungs- und Beratungsdienstleistungen für das Management oder die Führungsebene bereitstellt."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
+
 berorgs:Leitungsstab a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Management Staff"@en ;
     rdfs:label "Leitungsstab"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Leitungsstab represents a staff or team directly supporting the leadership or management of the organization."""@en ;
+    rdfs:comment """Der Leitungsstab repräsentiert Mitarbeiter oder ein Team, das die Führung oder das Management der Organisation direkt unterstützt."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Buero a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Office"@en ;
     rdfs:label "Büro"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Büro represents a functional office or workspace within the organization."""@en ;
+    rdfs:comment """Ein Büro repräsentiert ein funktionales Büro oder Arbeitsbereich innerhalb der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Ressort a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Section"@en ;
     rdfs:label "Ressort"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Ressort refers to a specialized department or section within the organization."""@en ;
+    rdfs:comment """Ein Ressort bezeichnet eine spezialisierte Abteilung oder Sektion innerhalb der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Justitiariat a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Legal Department"@en ;
     rdfs:label "Justitiariat"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """The Justitiariat represents the legal department within the organization, responsible for legal matters and advice."""@en ;
+    rdfs:comment """Das Justitiariat repräsentiert die Rechtsabteilung innerhalb der Organisation, zuständig für rechtliche Angelegenheiten und Beratung."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Fachdienst a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Specialized Service"@en ;
     rdfs:label "Fachdienst"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Fachdienst refers to a specialized service or unit within the organization."""@en ;
+    rdfs:comment """Ein Fachdienst bezeichnet einen spezialisierten Dienst oder eine Einheit innerhalb der Organisation."""@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -254,28 +255,28 @@ berorgs:SenatorIn a owl:Class ;
 berorgs:Abteilungsleitung a owl:Class ;
     rdfs:label "Division Head"@en ;
     rdfs:label "Abteilungsleitung"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Abteilungsleiter:in"""@de ;
+    rdfs:comment """The Division Head represents the leader or head of a specific division within the organization."""@en ;
+    rdfs:comment """Die Abteilungsleitung repräsentiert die Führung oder Leitung einer spezifischen Abteilung innerhalb der Organisation."""@de ;
     rdfs:subClassOf schema:Person ;
     org:headOf berorgs:abteilung ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Referatsleitung a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Department Head"@en ;
     rdfs:label "Referatsleitung"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Referatsleiter:in"""@de ;
+    rdfs:comment """The Department Head represents the leader or head of a specific department within the organization."""@en ;
+    rdfs:comment """Die Referatsleitung repräsentiert die Führung oder Leitung einer spezifischen Abteilung innerhalb der Organisation."""@de ;
     rdfs:subClassOf schema:Person ;
     org:headOf berorgs:referat ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:LeitungDesLeitungsstabs a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Head of Management Staff"@en ;
     rdfs:label "Leitung des Leitungsstabs"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """LdL"""@de ;
+    rdfs:comment """The Head of Management Staff represents the leader of the staff or team directly supporting the leadership or management of the organization."""@en ;
+    rdfs:comment """Die Leitung des Leitungsstabs repräsentiert die Führung des Personals oder Teams, das die Führung oder das Management der Organisation direkt unterstützt."""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -283,8 +284,8 @@ berorgs:LeitungDesLeitungsstabs a owl:Class ;
 berorgs:PressesprecherIn a owl:Class ;
     rdfs:label "Press Spokesperson"@en ;
     rdfs:label "Pressesprecher:in"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """Pressesprecher:in der jeweiligen Organisation"""@de ;
+    rdfs:comment """The Press Spokesperson represents the official spokesperson for the respective organization, responsible for communication with the media."""@en ;
+    rdfs:comment """Pressesprecher:innen repräsentieren die offiziellen Sprecher:innen der jeweiligen Organisation, zuständig für die Kommunikation mit den Medien."""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -292,8 +293,8 @@ berorgs:PressesprecherIn a owl:Class ;
 berorgs:DatenschutzbeauftragteR a owl:Class ;
     rdfs:label "Data Privacy Officer"@en ;
     rdfs:label "Behördliche Datenschutzbeauftragte:r"@de ;
-    rdfs:comment """"""@en ;
-    rdfs:comment """"""@de ;
+    rdfs:comment """The Data Privacy Officer represents the individual responsible for ensuring compliance with data protection laws and policies within the organization."""@en ;
+    rdfs:comment """Datenschutzbeauftragte repräsentieren die Personen, die für die Einhaltung der Datenschutzgesetze und -richtlinien innerhalb der Organisation verantwortlich sind."""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -301,117 +302,29 @@ berorgs:DatenschutzbeauftragteR a owl:Class ;
 berorgs:Bueroleitung a owl:Class ;
     rdfs:label "Chief of Staff"@en ;
     rdfs:label "Büroleitung"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """The Chief of Staff represents the leader or head of the office within the organization."""@en ;
+    rdfs:comment """Die Büroleitung repräsentiert die Führung oder Leitung des Büros innerhalb der Organisation."""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:StaatssekretaerIn a owl:Class ;
-    rdfs:label "State Secretary"@en ;
+    dfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A State Secretary represents a high-ranking official responsible for assisting the head of a government department or ministry."""@en ;
+    rdfs:comment """Staatssekretär:innen repräsentieren hochrangige Beamt:innen, die für die Unterstützung der Leitung einer Regierungsabteilung oder eines Ministeriums verantwortlich sind."""@de ;
     rdfs:subClassOf schema:Person ;
     schema:memberOf berorgs:senatsverwaltung ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:ReferentIn a owl:Class ;
-    rdfs:label "tbd"@en ;
+    rdfs:label "Specialist"@en ;
     rdfs:label "Referent:in"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
+    rdfs:comment """A Referent represents a specialist or expert within the organization, typically providing advice or expertise in a specific area."""@en ;
+    rdfs:comment """Referent:innen repräsentieren Spezialist:innen oder Expert:innen innerhalb der Organisation, die in der Regel Beratung oder Fachkenntnisse in einem bestimmten Bereich bieten."""@de ;
     rdfs:subClassOf schema:Person ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Fachdienst a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Fachdienst"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
 
-berorgs:Fachbereich a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Fachbereich"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Referat a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Referat"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Abteilung a owl:Class ;
-    rdfs:label "Division"@en ;
-    rdfs:label "Abteilung"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Serviceeinheit a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Serviceeinheit"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Organisationseinheit a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Organisationseinheit"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Stabsstelle a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Stabsstelle"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Buero a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Büro"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Ressort a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Ressort"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
-
-berorgs:Justitiariat a owl:Class ;
-    rdfs:label "tbd"@en ;
-    rdfs:label "Justitiariat"@de ;
-    rdfs:comment """tbd"""@en ;
-    rdfs:comment """tbd"""@de ;
-    rdfs:subClassOf org:Organization ;
-    rdfs:isDefinedBy berorgs: ;
-.
