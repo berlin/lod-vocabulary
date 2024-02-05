@@ -37,11 +37,11 @@
 - prefix: owl
   url: http://www.w3.org/2002/07/owl#
 
-- prefix: berorgs
-  url: https://berlin.github.io/lod-vocabulary/berorgs/
-
 - prefix: lodvocab
   url: https://berlin.github.io/lod-vocabulary/
+
+- prefix: berorgs
+  url: https://berlin.github.io/lod-vocabulary/berorgs/
 
 - prefix: dcterms
   url: http://purl.org/dc/terms#
