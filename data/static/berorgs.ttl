@@ -5,7 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix void: <http://rdfs.org/ns/void#> .
-@prefix berorgs: <https://berlin.github.io/lod-vocabulary/> .
+@prefix berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/> .
 
 # Vocabulary Terms
 
@@ -13,7 +13,7 @@ berorgs: a owl:Ontology ;
     rdfs:label "Berliner Organisationsvokabular"@de ;
     rdfs:label "Berlin Public Organisation Ontology"@en ;
     rdfs:comment """Ein Vokabular zur Beschreibung von Einheiten der Berliner Verwaltung. 
-    Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte. """@de ;
+    Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte."""@de ;
     rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/static/berorgs.ttl> ;
 .
@@ -25,11 +25,13 @@ berorgs:organigramm a owl:Class ;
     # dcterms:created ;
     # dcterms:creator ;
     # berorgs:contains ;
+    rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:contains a owl:property ;
     rdfs:label "um die jeweilige Organisation im Organigramm abzubilden"@de ;
     rdfs:label ""@en;
+    rdfs:isDefinedBy berorgs: ;
 .
 
 # Organization Types

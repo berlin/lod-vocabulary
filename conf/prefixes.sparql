@@ -11,3 +11,6 @@ PREFIX format: <http://www.w3.org/ns/formats/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX lodsg: <https://berlinonline.github.io/lod-sg/>
 PREFIX lodbo: <https://berlinonline.github.io/lod-berlin-bo/>
+PREFIX berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/>
+PREFIX lodvocab: <https://berlin.github.io/lod-vocabulary/>
+PREFIX organigram: <https://berlin.github.io/lod-organigram/>
