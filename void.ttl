@@ -31,7 +31,7 @@ lodvocab:
     void:dataDump <https://raw.githubusercontent.com/berlinonline/lod-vocabulary/main/data/static/lodvocab.ttl> ;
     void:feature <http://www.w3.org/ns/formats/Turtle> ;
     # void:rootResource lodvocab:berlinonline ;
-    void:exampleResource berorgs: ;
+    void:vocabulary berorgs: ;
 .
 
 # lodbo:impressum

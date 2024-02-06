@@ -23,7 +23,7 @@ jekyll_rdf:
   restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?predicate ?object FILTER(STRSTARTS(STR(?resourceUri), 'https://berlin.github.io/lod-vocabulary')) }"
   default_template: "default"
   class_template_mappings:
-    "http://rdfs.org/ns/void#Dataset": "core/dataset"
+    "http://rdfs.org/ns/void#Dataset": "dataset"
     "https://schema.org/Organization": "core/organization"
     "https://berlin.github.io/lod-vocabulary/ImprintPage": "core/imprint"
     "http://www.w3.org/2002/07/owl#Ontology": "core/voc_ontology"
