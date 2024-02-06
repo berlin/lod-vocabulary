@@ -20,11 +20,11 @@ berorgs: a owl:Ontology ;
 
 berorgs:Organigramm a owl:Class ;
     rdfs:label "Organigramm"@de ;
-    rdfs:label "organization chart"@en ;
-    rdfs:description "Das Organigramm wird hier angelegt."@de ;
-    # dcterms:title ;
-    # dcterms:created ;
-    # dcterms:creator ;
+    rdfs:label "organogram"@en ;
+    rdfs:comment """Das Organisationsstruktur oder Organigramm einer Organisation,
+    z.B. einer Behörde."""@de ;
+    rdfs:comment """The organizational chart or organogram of an organization, e.g.
+    a department within the public administration."""@en ;
     rdfs:isDefinedBy berorgs: ;
 .
 
