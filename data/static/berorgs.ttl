@@ -31,7 +31,10 @@ berorgs:Organogram a owl:Class ;
 berorgs:contains a owl:ObjectProperty ;
     rdfs:label "enthält"@de ;
     rdfs:label "contains"@en;
-    rdfs:comment "um die jeweilige Organisation im Organigramm abzubilden"@de ;
+    rdfs:comment """Diese Property bildet die Relation zwischen einem Organigramm und
+    den in ihm enthaltenen Organisationen ab."""@de ;
+    rdfs:comment """This property models the relation between an organogram and the
+    organizations contained within it."""@en ;
     rdfs:domain berorgs:Organogram ;
     rdfs:range org:Organization ;
     rdfs:isDefinedBy berorgs: ;
