@@ -11,7 +11,7 @@
 
 berorgs: a owl:Ontology ;
     rdfs:label "Berliner Organisationsvokabular"@de ;
-    rdfs:label "Berlin Public Organisation Ontology"@en ;
+    rdfs:label "Berlin Public Organisation Vocabulary"@en ;
     rdfs:comment """Ein Vokabular zur Beschreibung von Einheiten der Berliner Verwaltung. 
     Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte."""@de ;
     rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;

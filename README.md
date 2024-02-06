@@ -1,11 +1,16 @@
-# Berliner Organisationsstrukturen as Linked Open Data
+# Berlin LOD Vocabularies
 
-This repository holds some RDF data describing organizations and positions in organizations in berlin.
+This repository is the home for various vocabularies for linked open data published by the public administration of Berlin.
 
 The data was created and is maintained by hand and was published as Linked Open Data using the [LOD Site Generator](https://github.com/berlinonline/lod-sg) repository as a template.
+
+The vocabularies contained in this repository are:
+
+* [Berlin Public Organisation Vocabulary](https://berlin.github.io/lod-vocabulary/berorgs/)
+
 
 **[Start browsing the data!](https://berlin.github.io/lod-vocabulary/)**
 
 ## License
 
-All code in this repository is published under the [MIT License](License). All data (in particular [void.ttl](void.ttl) and [data/static/berorgs.ttl](data/static/berorgs.ttl)) are published under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+All code in this repository is published under the [MIT License](License). All data are published under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
