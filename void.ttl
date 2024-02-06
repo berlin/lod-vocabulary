@@ -28,7 +28,7 @@ lodvocab:
     # dct:publisher lodvocab:berlinonline ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     foaf:homepage <https://github.com/berlin/lod-vocabulary> ;
-    void:dataDump <https://raw.githubusercontent.com/berlinonline/lod-vocabulary/main/data/static/lodvocab.ttl> ;
+    # void:dataDump <https://raw.githubusercontent.com/berlinonline/lod-vocabulary/main/data/static/lodvocab.ttl> ;
     void:feature <http://www.w3.org/ns/formats/Turtle> ;
     # void:rootResource lodvocab:berlinonline ;
     void:vocabulary berorgs: ;
