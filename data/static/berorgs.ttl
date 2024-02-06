@@ -313,7 +313,7 @@ berorgs:Bueroleitung a owl:Class ;
 .
 
 berorgs:StaatssekretaerIn a owl:Class ;
-    dfs:label "State Secretary"@en ;
+    rdfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
     rdfs:comment """A State Secretary represents a high-ranking official responsible for assisting the head of a government department or ministry."""@en ;
     rdfs:comment """Staatssekretär:innen repräsentieren hochrangige Beamt:innen, die für die Unterstützung der Leitung einer Regierungsabteilung oder eines Ministeriums verantwortlich sind."""@de ;
