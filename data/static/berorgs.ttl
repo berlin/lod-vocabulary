@@ -18,7 +18,7 @@ berorgs: a owl:Ontology ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/static/berorgs.ttl> ;
 .
 
-berorgs:organigramm a owl:Class ;
+berorgs:Organigramm a owl:Class ;
     rdfs:label "Organigramm"@de ;
     rdfs:label "organization chart"@en ;
     rdfs:description "Das Organigramm wird hier angelegt."@de ;
@@ -32,7 +32,8 @@ berorgs:contains a owl:ObjectProperty ;
     rdfs:label "enthält"@de ;
     rdfs:label "contains"@en;
     rdfs:comment "um die jeweilige Organisation im Organigramm abzubilden"@de ;
-    rdfs:domain berorgs:organigramm ;
+    rdfs:domain berorgs:Organigramm ;
+    rdfs:range org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
