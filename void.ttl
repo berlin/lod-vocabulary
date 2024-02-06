@@ -24,7 +24,7 @@ lodvocab:
     dct:description "Verschiedene Vokabulare für Linked Open Data der Berliner Verwaltungen."@de ;
     dct:description "Various vocabularies for linked open data published by the public administration of Berlin."@en ;
     dct:created "2023-09-25"^^xsd:date ;
-    dct:modified "2024-02-05"^^xsd:date ;
+    dct:modified "2024-02-06"^^xsd:date ;
     # dct:publisher lodvocab:berlinonline ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     foaf:homepage <https://github.com/berlin/lod-vocabulary> ;
