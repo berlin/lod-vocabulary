@@ -334,4 +334,11 @@ berorgs:ReferentIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-
+berorgs:BezirksbuergermeisterIn a owl:Class ;
+    rdfs:label "District Mayor"@en ;
+    rdfs:label "Bezirksbürgermeister:in"@de ;
+    rdfs:comment """Chairperson of the district office of a district."""@en ;
+    rdfs:comment """Vorsitzende:r des Bezirksamtes eines Bezirks."""@de ;
+    rdfs:subClassOf org:Role ;
+    rdfs:isDefinedBy berorgs: ;
+.
