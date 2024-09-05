@@ -534,7 +534,7 @@ berorgs:Amtsleitung a owl:Class ;
 
 berorgs:Geschäftsleitung a owl:Class ;
     rdfs:label " "@en ;
-    rdfs:label "Geschäftsleitung"@de ;
+    rdfs:label "Geschaeftsleitung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
     rdfs:subClassOf org:Role ;
