@@ -514,7 +514,7 @@ berorgs:DirektorIn a owl:Class ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:PräsidentIn a owl:Class ;
+berorgs:PraesidentIn a owl:Class ;
     rdfs:label " "@en ;
     rdfs:label "Präsident:in"@de ;
     rdfs:comment """ """@en ;
