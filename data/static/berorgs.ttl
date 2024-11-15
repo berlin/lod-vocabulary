@@ -376,284 +376,250 @@ berorgs:SozialraumorientiertePlanungskoordination a owl:Class ;
 
 # Roles
 
-berorgs:SenatorIn a owl:Class ;
+berorgs:SenatorIn a org:Role ;
     rdfs:label "senator"@en ;
     rdfs:label "Senator:in"@de ;
     rdfs:comment """A Senator, head of the respective Senate Department. Equivalent to Minister on a State Level."""@en ;
     rdfs:comment """Senator:in der jeweiligen Senatsverwaltung."""@de ;
-    rdfs:subClassOf org:Role ;
-    org:headOf berorgs:senatsverwaltung ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Abteilungsleitung a owl:Class ;
+berorgs:Abteilungsleitung a org:Role ;
     rdfs:label "Division Head"@en ;
     rdfs:label "Abteilungsleitung"@de ;
     rdfs:comment """The Division Head represents the leader or head of a specific division within the organization."""@en ;
     rdfs:comment """Die Abteilungsleitung repräsentiert die Führung oder Leitung einer spezifischen Abteilung innerhalb der Organisation."""@de ;
-    rdfs:subClassOf org:Role ;
-    org:headOf berorgs:abteilung ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Referatsleitung a owl:Class ;
+berorgs:Referatsleitung a org:Role ;
     rdfs:label "Department Head"@en ;
     rdfs:label "Referatsleitung"@de ;
     rdfs:comment """The Department Head represents the leader or head of a specific department within the organization."""@en ;
     rdfs:comment """Die Referatsleitung repräsentiert die Führung oder Leitung einer spezifischen Abteilung innerhalb der Organisation."""@de ;
-    rdfs:subClassOf org:Role ;
-    org:headOf berorgs:referat ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:LeitungDesLeitungsstabs a owl:Class ;
+berorgs:LeitungDesLeitungsstabs a org:Role ;
     rdfs:label "Head of Management Staff"@en ;
     rdfs:label "Leitung des Leitungsstabs"@de ;
     rdfs:comment """The Head of Management Staff represents the leader of the staff or team directly supporting the leadership or management of the organization."""@en ;
     rdfs:comment """Die Leitung des Leitungsstabs repräsentiert die Führung des Personals oder Teams, das die Führung oder das Management der Organisation direkt unterstützt."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:PressesprecherIn a owl:Class ;
+berorgs:PressesprecherIn a org:Role ;
     rdfs:label "Press Spokesperson"@en ;
     rdfs:label "Pressesprecher:in"@de ;
     rdfs:comment """The Press Spokesperson represents the official spokesperson for the respective organization, responsible for communication with the media."""@en ;
     rdfs:comment """Pressesprecher:innen repräsentieren die offiziellen Sprecher:innen der jeweiligen Organisation, zuständig für die Kommunikation mit den Medien."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:DatenschutzbeauftragteR a owl:Class ;
+berorgs:DatenschutzbeauftragteR a org:Role ;
     rdfs:label "Data Privacy Officer"@en ;
     rdfs:label "Behördliche Datenschutzbeauftragte:r"@de ;
     rdfs:comment """The Data Privacy Officer represents the individual responsible for ensuring compliance with data protection laws and policies within the organization."""@en ;
     rdfs:comment """Datenschutzbeauftragte repräsentieren die Personen, die für die Einhaltung der Datenschutzgesetze und -richtlinien innerhalb der Organisation verantwortlich sind."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Bueroleitung a owl:Class ;
+berorgs:Bueroleitung a org:Role ;
     rdfs:label "Chief of Staff"@en ;
     rdfs:label "Büroleitung"@de ;
     rdfs:comment """The Chief of Staff represents the leader or head of the office within the organization."""@en ;
     rdfs:comment """Die Büroleitung repräsentiert die Führung oder Leitung des Büros innerhalb der Organisation."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:StaatssekretaerIn a owl:Class ;
+berorgs:StaatssekretaerIn a org:Role ;
     rdfs:label "State Secretary"@en ;
     rdfs:label "Staatssekretär:in"@de ;
     rdfs:comment """A State Secretary represents a high-ranking official responsible for assisting the head of a government department or ministry."""@en ;
     rdfs:comment """Staatssekretär:innen repräsentieren hochrangige Beamt:innen, die für die Unterstützung der Leitung einer Regierungsabteilung oder eines Ministeriums verantwortlich sind."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:ReferentIn a owl:Class ;
+berorgs:ReferentIn a org:Role ;
     rdfs:label "Specialist"@en ;
     rdfs:label "Referent:in"@de ;
     rdfs:comment """A Referent represents a specialist or expert within the organization, typically providing advice or expertise in a specific area."""@en ;
     rdfs:comment """Referent:innen repräsentieren Spezialist:innen oder Expert:innen innerhalb der Organisation, die in der Regel Beratung oder Fachkenntnisse in einem bestimmten Bereich bieten."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:BezirksbuergermeisterIn a owl:Class ;
+berorgs:BezirksbuergermeisterIn a org:Role ;
     rdfs:label "District Mayor"@en ;
     rdfs:label "Bezirksbürgermeister:in"@de ;
     rdfs:comment """Chairperson of the district office of a district."""@en ;
     rdfs:comment """Vorsitzende:r des Bezirksamtes eines Bezirks."""@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Leitung a owl:Class ;
+berorgs:Leitung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Leitung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Bueroleitung a owl:Class ;
+berorgs:Bueroleitung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Büroleitung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:BehoerdlicheRBeauftragteR a owl:Class ;
+berorgs:BehoerdlicheRBeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Behördliche:r Beauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:LandesbeauftragteR a owl:Class ;
+berorgs:LandesbeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Landesbeauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Personalrat a owl:Class ;
+berorgs:Personalrat a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Personalrat"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Frauenvertretung a owl:Class ;
+berorgs:Frauenvertretung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Frauenvertretung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Schwerbehindertenvertretung a owl:Class ;
+berorgs:Schwerbehindertenvertretung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Schwerbehindertenvertretung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Auszubildendenvertretung a owl:Class ;
+berorgs:Auszubildendenvertretung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Auszubildendenvertretung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:DirektorIn a owl:Class ;
+berorgs:DirektorIn a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Direktor:in"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:PraesidentIn a owl:Class ;
+berorgs:PraesidentIn a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Präsident:in"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Amtsleitung a owl:Class ;
+berorgs:Amtsleitung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Amtsleitung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:Geschaeftsleitung a owl:Class ;
+berorgs:Geschaeftsleitung a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Geschäftsleitung"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:VorsteherIn a owl:Class ;
+berorgs:VorsteherIn a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Vorsteher:in"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:AmtsleiterIn a owl:Class ;
+berorgs:AmtsleiterIn a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Amtsleiter:in"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:NachhaltigkeitsbeauftragteR a owl:Class ;
+berorgs:NachhaltigkeitsbeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Nachhaltigkeitsbeauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:IntegrationsbeauftragteR a owl:Class ;
+berorgs:IntegrationsbeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Integrationsbeauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:EuropabeauftragteR a owl:Class ;
+berorgs:EuropabeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Europabeauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:BeauftragteRFuerPartnerschaften a owl:Class ;
+berorgs:BeauftragteRFuerPartnerschaften a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Beauftragte:r für Partnerschaften"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:BeauftragteRFuerEUUndStaedtepartnerschaften a owl:Class ;
+berorgs:BeauftragteRFuerEUUndStaedtepartnerschaften a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Beauftragte:r für EU- und Städtepartnerschaften"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:GleichstellungsbeauftragteR a owl:Class ;
+berorgs:GleichstellungsbeauftragteR a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Gleichstellungsbeauftragte:r"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
 
-berorgs:BezirksstadtraetIn a owl:Class ;
+berorgs:BezirksstadtraetIn a org:Role ;
     rdfs:label " "@en ;
     rdfs:label "Bezirksstadträt:in"@de ;
     rdfs:comment """ """@en ;
     rdfs:comment """ """@de ;
-    rdfs:subClassOf org:Role ;
     rdfs:isDefinedBy berorgs: ;
 .
