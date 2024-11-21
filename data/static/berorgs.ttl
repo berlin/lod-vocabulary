@@ -249,127 +249,85 @@ berorgs:Fachdienst a owl:Class ;
 .
 
 berorgs:Geschaeftsbereich a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Geschäftsbereich"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Geschaeftsstelle a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Geschäftsstelle"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Sekretariat a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Sekretariat"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Landesbetrieb a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Landesbetrieb"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Landesinstitut a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Landesinstitut"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Landesarchiv a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Landesarchiv"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Landeszentrale a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Landeszentrale"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:AnstaltDesOeffentlichenRechts a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Anstalt des öffentlichen Rechts"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Stiftung a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Stiftung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Gericht a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Gericht"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:BVVBuero a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "BVV-Büro"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Pressestelle a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Pressestelle"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Rechtsamt a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Rechtsamt"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:SozialraumorientiertePlanungskoordination a owl:Class ;
-    rdfs:label " "@en ;
     rdfs:label "Sozialraumorientierte Planungskoordination"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
@@ -457,169 +415,106 @@ berorgs:BezirksbuergermeisterIn a org:Role ;
 .
 
 berorgs:Leitung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Leitung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Bueroleitung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Büroleitung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:BehoerdlicheRBeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Behördliche:r Beauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:LandesbeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Landesbeauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Personalrat a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Personalrat"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Frauenvertretung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Frauenvertretung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Schwerbehindertenvertretung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Schwerbehindertenvertretung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Auszubildendenvertretung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Auszubildendenvertretung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:DirektorIn a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Direktor:in"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:PraesidentIn a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Präsident:in"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Amtsleitung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Amtsleitung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Geschaeftsleitung a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Geschäftsleitung"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:VorsteherIn a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Vorsteher:in"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:AmtsleiterIn a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Amtsleiter:in"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:NachhaltigkeitsbeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Nachhaltigkeitsbeauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:IntegrationsbeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Integrationsbeauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:EuropabeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Europabeauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:BeauftragteRFuerPartnerschaften a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Beauftragte:r für Partnerschaften"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:BeauftragteRFuerEUUndStaedtepartnerschaften a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Beauftragte:r für EU- und Städtepartnerschaften"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:GleichstellungsbeauftragteR a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Gleichstellungsbeauftragte:r"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:BezirksstadtraetIn a org:Role ;
-    rdfs:label " "@en ;
     rdfs:label "Bezirksstadträt:in"@de ;
-    rdfs:comment """ """@en ;
-    rdfs:comment """ """@de ;
     rdfs:isDefinedBy berorgs: ;
 .
