@@ -297,12 +297,14 @@ berorgs:AnstaltDesOeffentlichenRechts a owl:Class ;
 .
 
 berorgs:Stiftung a owl:Class ;
+    rdfs:label "foundation"@en ;
     rdfs:label "Stiftung"@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
 .
 
 berorgs:Gericht a owl:Class ;
+    rdfs:label "court"@en ;
     rdfs:label "Gericht"@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
@@ -315,6 +317,7 @@ berorgs:BVVBuero a owl:Class ;
 .
 
 berorgs:Pressestelle a owl:Class ;
+    rdfs:label "press office"@en ;
     rdfs:label "Pressestelle"@de ;
     rdfs:subClassOf org:Organization ;
     rdfs:isDefinedBy berorgs: ;
