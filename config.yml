@@ -1,0 +1,54 @@
+# config file for jinja-rdf
+
+# the following two settings are determined by the namespace of the data/vocab we want to serve
+base_url: 'https://berlin.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+base_path: '/lod-vocabulary' # the subpath of your site, e.g. /blog
+
+# where is the data:
+dataset_path: 'data/temp/all.nt'
+
+# where are the templates:
+template_path: 'templates'
+
+# where should we put the generated site (locally):
+output_path: '_site/'
+
+# RDF prefixes that can be used in the templates (in UPPERCASE) and in SPARQL queries (as is):
+# (should include the namespace of our data)
+prefixes:
+  berorgs: https://berlin.github.io/lod-vocabulary/berorgs/
+  dct: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
+  hh: https://okfde.github.io/lod-budget-vocab/
+  lodsg: https://berlinonline.github.io/lod-sg/
+  meta: https://cube.link/meta/
+  org: http://www.w3.org/ns/org#
+  owl: http://www.w3.org/2002/07/owl#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: https://schema.org/
+  shacl: http://www.w3.org/ns/shacl#
+  void: http://rdfs.org/ns/void#
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+# files or folders that should be copied into the generated site:
+include:
+  - assets/
+
+default_template: "berlin.lod.basetheme/default.html.jinja"
+
+# a mapping from RDF classes to templates:
+# (Everything not included in the mapping will use the default template.)
+class_template_mappings:
+  "void:Dataset": "dataset.html.jinja"
+  "owl:Ontology": "berlin.lod.vocabtheme/voc_ontology.html.jinja"
+  "rdfs:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
+  "owl:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
+  "rdf:Property": "berlin.lod.vocabtheme/voc_property.html.jinja"
+  "owl:DatatypeProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
+  "owl:ObjectProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
+
+
+themes:
+  - berlin.lod.basetheme
+  - berlin.lod.vocabtheme

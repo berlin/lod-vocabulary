@@ -1,10 +1,7 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# Workflow for building and deploying a static website based on
+# RDF data with Jinja-RDF
 
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: Build and Deploy Static RDF Site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,33 +29,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Install Python Requirements
         run: |
           pip install -r requirements.txt
+      - name: Install themes
+        run: |
+          make install_templates
       - name: Build source RDF
         run: |
           make data/temp/all.nt
-      - name: Build concise bounded descriptions
-        run: |
-          make cbds
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
-        with:
-          ruby-version: "3.1" # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
-      - name: Build with Jekyll
+        uses: actions/configure-pages@v5
+      - name: Build with Jinja-RDF
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --trace --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
+        run: make generate
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
 
   # Deployment job
   deploy:
@@ -70,4 +63,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

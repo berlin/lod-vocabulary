@@ -1,2 +1,3 @@
-rdflib
-sparqlwrapper
+jinja-rdf @ git+https://github.com/berlinonline/jinjardf@main
+lod-berlin-basetheme @ git+https://github.com/berlin/lod-berlin-basetheme@main
+lod-berlin-vocabtheme @ git+https://github.com/berlin/lod-berlin-vocabtheme@main

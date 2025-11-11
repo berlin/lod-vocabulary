@@ -1,5 +1,21 @@
-base_uri = https://berlin.github.io/lod-vocabulary
-log_sg_repo = https://github.com/berlinonline/lod-sg
+
+generate: data/temp/all.nt
+	python bin/generate.py
+
+generate+serve_locally: data/temp/all.nt
+	python bin/generate.py --site_url http://localhost:8000 --serve
+
+void.ttl: data/static/void.ttl data/temp/stats_berorgs.nt
+	@echo "generating public VOID file at $@ by combining: $^"
+	@rdfpipe -o turtle $^ > $@
+
+data/temp/stats_berorgs.nt: data/temp
+	@echo "generating VOID statistics for Berorgs vocab ..."
+	@echo "writing to $@ ..."
+	@python bin/void_statistics.py \
+		--input "data/static/berorgs.ttl" \
+		--base_uri "https://berlin.github.io/lod-vocabulary/berorgs/" \
+		--dataset_uri "https://berlin.github.io/lod-vocabulary/berorgs/" > $@
 
 # This target creates the RDF file that serves as the input to the static site generator.
 # All data should be merged in this file. This should include at least the VOID dataset
@@ -9,22 +25,10 @@ data/temp/all.nt: data/temp void.ttl data/static/berorgs.ttl
 	@echo "combining $(filter-out $<,$^) to $@ ..."
 	@rdfpipe -o ntriples $(filter-out $<,$^) > $@
 
-cbds: _includes/cbds data/temp/all.nt
-	@echo "computing concise bounded descriptions for all subjects in input data"
-	@python bin/compute_cbds.py --base="$(base_uri)"
+install_templates:
+	python bin/install_templates.py
 
-update-core-templates: data/temp _includes/core _layouts/core
-	@echo "cloning $(log_sg_repo) into data/temp ..."
-	@git clone -b develop --single-branch $(log_sg_repo) data/temp/lod-sg
-	@cp data/temp/lod-sg/_includes/core/* _includes/core
-	@cp data/temp/lod-sg/_layouts/core/* _layouts/core
-
-.PHONY: serve-local
-serve-local: data/temp/all.nt cbds
-	@echo "serving local version of static LOD site ..."
-	@bundle exec jekyll serve
-
-clean: clean-temp clean-cbds clean-jekyll
+clean: clean-temp
 
 clean-temp:
 	@echo "deleting temp folder ..."
@@ -32,17 +36,6 @@ clean-temp:
 
 data/temp:
 	@echo "creating temp directory ..."
-	@mkdir -p data/temp
-
-_includes/cbds:
-	@echo "creating $@ directory ..."
 	@mkdir -p $@
 
-clean-cbds:
-	@echo "deleting cbd folder ..."
-	@rm -rf _includes/cbds
 
-clean-jekyll:
-	@echo "deleting jekyll artifacts ..."
-	@rm -rf _site
-	@rm -rf .jekyll-cache

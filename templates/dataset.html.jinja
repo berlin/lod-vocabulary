@@ -1,0 +1,16 @@
+{% extends 'berlin.lod.basetheme/dataset.html.jinja' %}
+
+{% set dataset_breadcrumb = "Dortiporti" %}
+
+{% block dataset_vocabs %}
+  {% set vocabs = node | rdf_property(VOID.vocabulary) %}
+  {% for vocab in vocabs | sort %}
+    <tr>
+      <td>Enthaltenes Vokabular:</td>
+      <td>
+        <a href="{{ vocab | relative_uri }}">{{ vocab | title_any(languages=['de'], default=helper.prefix_label(vocab) )}}</a>
+        {# {{ helper.prefix_link(vocab)}} #}
+      </td>
+    </tr>
+  {% endfor %}
+{% endblock dataset_vocabs %}
