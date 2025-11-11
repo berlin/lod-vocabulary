@@ -1,0 +1,35 @@
+@prefix berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lodvocab: <https://berlin.github.io/lod-vocabulary/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix organigram: <https://berlin.github.io/lod-organigram/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swformats: <https://www.w3.org/ns/formats/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# edit this VOID file, not the one in root. The one in root is generated automatically based on this one.
+
+
+lodvocab:
+    a void:Dataset ;
+    dct:title "Berliner LOD-Vokabulare"@de ;
+    dct:title "Berlin LOD vocabularies"@en ;
+    dct:description "Verschiedene Vokabulare für Linked Open Data der Berliner Verwaltungen."@de ;
+    dct:description "Various vocabularies for linked open data published by the public administration of Berlin."@en ;
+    dct:created "2023-09-25"^^xsd:date ;
+    dct:modified "2025-11-10"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    foaf:homepage <https://github.com/berlin/lod-vocabulary> ;
+    void:feature swformats:Turtle ;
+    void:vocabulary berorgs: ;
+.

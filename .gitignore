@@ -1,9 +1,14 @@
 /data/temp
-Gemfile.lock
 _site/
-.jekyll-cache/
 .vscode
-_includes/cbds
 venv/
 lib/
+
+assets/berlin.lod.basetheme
+assets/berlin.lod.vocabtheme
+config/berlin.lod.basetheme
+config/berlin.lod.vocabtheme
+templates/berlin.lod.basetheme
+templates/berlin.lod.vocabtheme
+
 .DS_Store
