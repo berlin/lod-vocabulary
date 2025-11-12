@@ -1,0 +1,18 @@
+# Return all vocabulary elements that are missing one of the following:
+# - English label
+# - English description
+# - German description
+# Also show which of these is missing.
+
+PREFIX berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?vocab_element ?label_en_missing ?comment_de_missing ?comment_en_missing
+WHERE {
+    ?vocab_element rdfs:isDefinedBy berorgs: .
+    BIND(IF(NOT EXISTS {?vocab_element rdfs:label ?english_label FILTER (lang(?english_label) = 'en')}, true, false) AS ?label_en_missing)
+    BIND(IF(NOT EXISTS {?vocab_element rdfs:comment ?german_comment FILTER (lang(?german_comment) = 'de')}, true, false) AS ?comment_de_missing)
+    BIND(IF(NOT EXISTS {?vocab_element rdfs:comment ?english_comment FILTER (lang(?english_comment) = 'en')}, true, false) AS ?comment_en_missing)
+    FILTER(?label_en_missing || ?comment_de_missing || ?comment_en_missing)
+}
+ORDER BY ?vocab_element
