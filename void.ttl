@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lodvocab: <https://berlin.github.io/lod-vocabulary/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix swformats: <https://www.w3.org/ns/formats/> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -19,10 +20,12 @@ lodvocab: a void:Dataset ;
     void:vocabulary berorgs: ;
     foaf:homepage <https://github.com/berlin/lod-vocabulary> .
 
-berorgs: void:classPartition [ void:class owl:ObjectProperty ;
+berorgs: void:classPartition [ void:class owl:Class ;
+            void:entities 36 ],
+        [ void:class org:Role ;
+            void:entities 30 ],
+        [ void:class owl:ObjectProperty ;
             void:entities 1 ],
-        [ void:class owl:Class ;
-            void:entities 31 ],
         [ void:class owl:Ontology ;
             void:entities 1 ] .
 

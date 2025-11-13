@@ -41,12 +41,13 @@ default_template: "berlin.lod.basetheme/default.html.jinja"
 # (Everything not included in the mapping will use the default template.)
 class_template_mappings:
   "void:Dataset": "dataset.html.jinja"
-  "owl:Ontology": "berlin.lod.vocabtheme/voc_ontology.html.jinja"
+  "owl:Ontology": "ontology.html.jinja"
   "rdfs:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
   "owl:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
   "rdf:Property": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "owl:DatatypeProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "owl:ObjectProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
+  "org:Role": "role.html.jinja"
 
 
 themes:

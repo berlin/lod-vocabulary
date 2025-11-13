@@ -1,0 +1,52 @@
+{% extends 'berlin.lod.vocabtheme/voc_ontology.html.jinja' %}
+
+{% block other_list %}
+  {% set other_query = '''
+    SELECT ?term ?type
+    WHERE {
+    ?term 
+      a ?type ;
+      rdfs:isDefinedBy ?resource_uri .
+    # the filtering will not work if a term has multiple types,
+    # one of which is not in the list of filtered types
+    FILTER(!sameTerm(?type, owl:Class))
+    FILTER(!sameTerm(?type, rdfs:Class))
+    FILTER(!sameTerm(?type, rdf:Property))
+    FILTER(!sameTerm(?type, owl:ObjectProperty))
+    FILTER(!sameTerm(?type, owl:DatatypeProperty))
+    FILTER(!sameTerm(?type, owl:AnnotationProperty))
+    FILTER(!sameTerm(?type, org:Role))
+    } ORDER BY ?type ?term
+  '''
+  %}
+  {% set results = node | sparql_query(other_query) %}
+  {% if results %}
+    <div class="col-lg-4">
+      {{ voc_helper.term_list(results, title="Andere", title_properties=[SCHEMA.name, SCHEMA.description], title_languages=['de'])}}
+    </div>
+  {% endif %}
+{% endblock other_list %}
+
+{% block term_lists %}
+
+  {{ super() }}
+
+  {% block role_list %}
+    {% set role_query = '''
+    SELECT ?role
+    WHERE {
+      ?role 
+        rdfs:isDefinedBy ?resource_uri ;
+        a org:Role ;
+      .
+    } ORDER BY ?role
+    '''%}
+    {% set results = node | sparql_query(role_query) %}
+    {% if results %}
+      <div class="col-lg-4">
+        {{ voc_helper.term_list(results, title="Rollen", description="Welche Rollen werden in diesem Vokabular definiert?", term_var='role', title_languages=['de'])}}
+      </div>
+    {% endif %}
+  {% endblock role_list %}
+
+{% endblock term_lists %}
