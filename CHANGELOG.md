@@ -2,8 +2,13 @@
 
 ## Development
 
+## [0.1.0](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.0)
+
+_(2025-11-13)_
+
 - Change site-generation from Jekyll to [Jinja-RDF](https://github.com/berlinonline/jinjardf).
 - Add changelog.
+- Fixes to roles and labels in [organization vocabulary](data/static/berorgs.ttl).
   
 ## [0.0.1](https://github.com/berlin/lod-vocabulary/releases/tag/0.0.1)
 
