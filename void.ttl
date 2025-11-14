@@ -4,7 +4,6 @@
 @prefix lodvocab: <https://berlin.github.io/lod-vocabulary/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix swformats: <https://www.w3.org/ns/formats/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -13,19 +12,8 @@ lodvocab: a void:Dataset ;
     dcterms:description "Verschiedene Vokabulare für Linked Open Data der Berliner Verwaltungen."@de,
         "Various vocabularies for linked open data published by the public administration of Berlin."@en ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dcterms:modified "2025-11-10"^^xsd:date ;
+    dcterms:modified "2025-11-13"^^xsd:date ;
     dcterms:title "Berliner LOD-Vokabulare"@de,
         "Berlin LOD vocabularies"@en ;
-    void:feature swformats:Turtle ;
     void:vocabulary berorgs: ;
     foaf:homepage <https://github.com/berlin/lod-vocabulary> .
-
-berorgs: void:classPartition [ void:class owl:Class ;
-            void:entities 36 ],
-        [ void:class org:Role ;
-            void:entities 30 ],
-        [ void:class owl:ObjectProperty ;
-            void:entities 1 ],
-        [ void:class owl:Ontology ;
-            void:entities 1 ] .
-

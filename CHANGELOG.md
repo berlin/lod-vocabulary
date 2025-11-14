@@ -9,6 +9,7 @@ _(2025-11-13)_
 - Change site-generation from Jekyll to [Jinja-RDF](https://github.com/berlinonline/jinjardf).
 - Add changelog.
 - Fixes to roles and labels in [organization vocabulary](data/static/berorgs.ttl).
+- Restructure repository: each vocabulary/ontology has its own folder under [data][data], so that we can put things like separate changelogs or stats files for each vocabulary there.
   
 ## [0.0.1](https://github.com/berlin/lod-vocabulary/releases/tag/0.0.1)
 

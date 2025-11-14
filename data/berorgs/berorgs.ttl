@@ -6,6 +6,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/> .
+@prefix swformats: <https://www.w3.org/ns/formats/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Vocabulary Terms
@@ -17,15 +18,18 @@ berorgs: a owl:Ontology ;
     Dies beinhaltet Typen von Organisationen, Arten von Unterorganisationen und Rollen, wie Abteilungen, und Beauftragte."""@de ;
     rdfs:comment """A vocabulary for describing organisations and organisational units of the Berlin public administration."""@en ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/static/berorgs.ttl> ;
+    void:feature swformats:Turtle ;
     dcterms:created "2023-09-25"^^xsd:date ;
-    dcterms:modified "2025-11-10"^^xsd:date ;
+    dcterms:modified "2025-11-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/berlin/lod-vocabulary/refs/heads/main/data/berorgs/stats.ttl> ;
 .
 
 berorgs:Organogram a owl:Class ;
     rdfs:label "Organigramm"@de ;
     rdfs:label "organogram"@en ;
-    rdfs:comment """Das Organisationsstruktur oder Organigramm einer Organisation,
+    rdfs:comment """Die Organisationsstruktur oder das Organigramm einer Organisation,
     z.B. einer Behörde."""@de ;
     rdfs:comment """The organizational chart or organogram of an organization, e.g.
     a department within the public administration."""@en ;

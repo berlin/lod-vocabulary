@@ -17,6 +17,10 @@ parser.add_argument('--base_uri',
                     help="Base URI of resources to include.",
                     required=True
                     )
+parser.add_argument('--base_prefix',
+                    help="Prefix to use for the base_uri",
+                    required=True
+                    )
 parser.add_argument('--dataset_uri',
                     help="URI of the VOID dataset resource to which the statistics will be attached.",
                     required=True
@@ -25,6 +29,7 @@ args = parser.parse_args()
 
 graph = Graph()
 stats_graph = Graph()
+stats_graph.bind(args.base_prefix, args.base_uri)
 dataset_res = URIRef(args.dataset_uri)
 LOG.info(f" loading dataset from {args.input}")
 graph.parse(args.input)
@@ -50,4 +55,4 @@ for result in results:
     stats_graph.add( (partition_res, VOID['class'], URIRef(result.type)) )
     stats_graph.add( (partition_res, VOID.entities, Literal(result.resource_count)) )
 
-print(stats_graph.serialize(format="ntriples"))
+print(stats_graph.serialize(format="turtle"))

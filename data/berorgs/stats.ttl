@@ -1,0 +1,16 @@
+@prefix berorgs: <https://berlin.github.io/lod-vocabulary/berorgs/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+berorgs: void:classPartition [ void:class owl:ObjectProperty ;
+            void:entities 1 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 36 ],
+        [ void:class org:Role ;
+            void:entities 30 ] .
+
+
