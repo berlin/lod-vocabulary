@@ -6,11 +6,11 @@
 
 berorgs: void:classPartition [ void:class owl:ObjectProperty ;
             void:entities 1 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
         [ void:class owl:Class ;
             void:entities 36 ],
         [ void:class org:Role ;
-            void:entities 30 ],
-        [ void:class owl:Ontology ;
-            void:entities 1 ] .
+            void:entities 30 ] .
 
 

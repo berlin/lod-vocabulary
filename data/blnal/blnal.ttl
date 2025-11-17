@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix blnal: <https://berlin.github.io/lod-vocabulary/blnal/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swformats: <https://www.w3.org/ns/formats/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Vocabulary Terms
+
+blnal: a owl:Ontology ;
+    rdfs:label "'Berliner Allerlei'-Vokabular"@de ;
+    rdfs:label "'Berliner Allerlei' Vocabulary (Berlin Assortment)"@en ;
+    rdfs:comment """Ein Vokabular unzusammenhängender Klassen, Properties und anderer Terminologie für Linked Open Data der Berliner Verwaltung. Die Terme haben werder inhaltlich nicht in ein anderes Vokabular gepasst, noch ein jeweils eigenes Vokabular gerechtfertigt."""@de ;
+    rdfs:comment """A vocabulary for disconnected classes, properties and other kinds of terminology for linked open data from the public administration of Berlin. Each of the terms did neither fit thematically into another existing vocabulary, nor did the warrant a new vocabular on their own."""@en ;
+    void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/blnal/blnal.ttl> ;
+    void:feature swformats:Turtle ;
+    dcterms:created "2025-11-17"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    owl:versionInfo "0.1.0" ;
+    blnal:changelog <https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md> ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/berlin/lod-vocabulary/refs/heads/main/data/blnal/stats.ttl> ;
+.
+
+blnal:acronym a owl:AnnotationProperty ;
+    rdfs:label "Acronym"@en ;
+    rdfs:label "Acronym"@de ;
+    rdfs:comment "Ein Acronym als alternativer Bezeichner für beliebige Entitäten."@de ;
+    rdfs:comment "An acronym as an alternative label for any kind of entity."@en ;
+    rdfs:subPropertyOf skos:altLabel ;
+    rdfs:isDefinedBy blnal: ;
+    rdfs:seeAlso <https://github.com/berlinonline/lod-berlin-lor/blob/with_vocab/data/vocab/units.ttl#L80> ;
+.
+
+blnal:dataAnonmized a owl:DatatypeProperty ;
+    rdfs:label "Daten anonymisiert"@de ;
+    rdfs:label "Data anonymised"@en ;
+    rdfs:comment "Zeigt an, dass die Primärdaten (oder die Distribution) eines Datensatzes anonymisiert wurden. Es handelt sich dabei lediglich um die allgemeine Information, dass Schritte zur Anonymisierung unternommen wurden. Es gibt keine Angabe über den Grad der Anonymisierung (oder Pseudoanonymisierung)."@de ;
+    rdfs:comment "Indicates that the primary data (or distribution) of a dataset has been anonymized in some way. This is just a generic information that some effort has been made towards anonymization – mo guarantees are made about the level of anonymization (or pseudo-anonymization)."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy blnal: ;
+.
+
+blnal:changelog a owl:ObjectProperty;
+    rdfs:label "Changelog"@de ;
+    rdfs:label "Changelog"@en ;
+    rdfs:comment "Link zum Changelog eines Projekts, etwas eines Datensatzes oder einer Ontologie."@de ;
+    rdfs:comment "Link to the changelog of a project, such as a dataset or an ontology."@en ;
+    rdfs:subPropertyOf foaf:page ;
+    rdfs:isDefinedBy blnal: ;
+.
+    

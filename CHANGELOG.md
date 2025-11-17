@@ -6,7 +6,8 @@
 
 _(2025-11-17)_
 
-- Add [LOR Units vocabulary](https://berlin.github.io/lod-vocabulary/lorunits/)
+- Add [LOR Units vocabulary](https://berlin.github.io/lod-vocabulary/lorunits/).
+- Add [Berliner Allerlei vocabulary](https://berlin.github.io/lod-vocabulary/blnal/).
 
 ## [0.1.0](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.0)
 

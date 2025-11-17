@@ -3,13 +3,11 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-lorunits: void:classPartition [ void:class owl:Ontology ;
-            void:entities 1 ],
-        [ void:class owl:AnnotationProperty ;
-            void:entities 1 ],
-        [ void:class owl:Class ;
+lorunits: void:classPartition [ void:class owl:Class ;
             void:entities 5 ],
         [ void:class owl:DatatypeProperty ;
+            void:entities 1 ],
+        [ void:class owl:Ontology ;
             void:entities 1 ] .
 
 

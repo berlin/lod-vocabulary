@@ -14,6 +14,15 @@ data/berorgs/stats.ttl: data/berorgs/berorgs.ttl
 		--base_prefix "berorgs" \
 		--dataset_uri "https://berlin.github.io/lod-vocabulary/berorgs/" > $@
 
+data/blnal/stats.ttl: data/blnal/blnal.ttl
+	@echo "generating VOID statistics for Berliner Allerlei vocab from $^..."
+	@echo "writing to $@ ..."
+	@python bin/void_statistics.py \
+		--input $^ \
+		--base_uri "https://berlin.github.io/lod-vocabulary/blnal/" \
+		--base_prefix "blnal" \
+		--dataset_uri "https://berlin.github.io/lod-vocabulary/blnal/" > $@
+
 data/lorunits/stats.ttl: data/lorunits/units.ttl
 	@echo "generating VOID statistics for LOR Units vocab from $^..."
 	@echo "writing to $@ ..."
@@ -27,7 +36,10 @@ data/lorunits/stats.ttl: data/lorunits/units.ttl
 # All data should be merged in this file. This should include at least the VOID dataset
 # description and the actual data.
 # The target works by merging all prerequisites.
-data/temp/all.nt: data/temp void.ttl data/berorgs/berorgs.ttl data/berorgs/stats.ttl data/lorunits/units.ttl data/lorunits/stats.ttl
+data/temp/all.nt: data/temp void.ttl \
+	data/berorgs/berorgs.ttl data/berorgs/stats.ttl \
+	data/lorunits/units.ttl data/lorunits/stats.ttl \
+	data/blnal/blnal.ttl data/blnal/stats.ttl
 	@echo "combining $(filter-out $<,$^) to $@ ..."
 	@rdfpipe -o ntriples $(filter-out $<,$^) > $@
 

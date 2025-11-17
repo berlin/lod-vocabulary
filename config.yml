@@ -17,7 +17,9 @@ output_path: '_site/'
 # (should include the namespace of our data)
 prefixes:
   berorgs: https://berlin.github.io/lod-vocabulary/berorgs/
+  blnal: https://berlin.github.io/lod-vocabulary/blnal/
   dct: http://purl.org/dc/terms/
+  dcat: http://www.w3.org/ns/dcat#
   foaf: http://xmlns.com/foaf/0.1/
   hh: https://okfde.github.io/lod-budget-vocab/
   lodsg: https://berlinonline.github.io/lod-sg/
@@ -29,6 +31,7 @@ prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   schema: https://schema.org/
   shacl: http://www.w3.org/ns/shacl#
+  skos: http://www.w3.org/2004/02/skos/core#
   swformats: https://www.w3.org/ns/formats/
   void: http://rdfs.org/ns/void#
   xsd: http://www.w3.org/2001/XMLSchema#
@@ -47,6 +50,7 @@ class_template_mappings:
   "rdfs:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
   "owl:Class": "berlin.lod.vocabtheme/voc_class.html.jinja"
   "rdf:Property": "berlin.lod.vocabtheme/voc_property.html.jinja"
+  "owl:AnnotationProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "owl:DatatypeProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "owl:ObjectProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "org:Role": "role.html.jinja"

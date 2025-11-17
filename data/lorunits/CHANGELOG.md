@@ -7,3 +7,4 @@
 _(2025-11-17)_
 
 - Move vocabulary to this repository and change namespace from https://berlinonline.github.io/lod-berlin-lor/vocab/ to https://berlin.github.io/lod-vocabulary/lorunits/.
+- Move `acronym` property to [blnal](https://berlin.github.io/lod-vocabulary/blnal/) vocab.
