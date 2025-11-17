@@ -13,7 +13,7 @@ _(2025-11-13)_
 - Add more English labels.
 - Introduce vocabulary version.
   
-## [0.0.1](https://github.com/berlin/lod-vocabulary/blob/berorgs_0.0.1/data/berorgs/berorgs.ttl)
+## [0.0.1](https://github.com/berlin/lod-vocabulary/blob/berorgs_0.0.1/data/static/berorgs.ttl)
 
 _(2023-09-25)_
 
