@@ -13,7 +13,7 @@ lodvocab: a void:Dataset ;
     dcterms:description "Verschiedene Vokabulare für Linked Open Data der Berliner Verwaltungen."@de,
         "Various vocabularies for linked open data published by the public administration of Berlin."@en ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dcterms:modified "2025-11-13"^^xsd:date ;
+    dcterms:modified "2025-11-17"^^xsd:date ;
     dcterms:title "Berliner LOD-Vokabulare"@de,
         "Berlin LOD vocabularies"@en ;
     void:vocabulary berorgs: , lorunits: ;
