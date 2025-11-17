@@ -6,7 +6,7 @@
     WHERE {
     ?term 
       a ?type ;
-      rdfs:isDefinedBy ?resource_uri .
+      rdfs:isDefinedBy ?resourceUri .
     # the filtering will not work if a term has multiple types,
     # one of which is not in the list of filtered types
     FILTER(!sameTerm(?type, owl:Class))
@@ -36,7 +36,7 @@
     SELECT ?role
     WHERE {
       ?role 
-        rdfs:isDefinedBy ?resource_uri ;
+        rdfs:isDefinedBy ?resourceUri ;
         a org:Role ;
       .
     } ORDER BY ?role
