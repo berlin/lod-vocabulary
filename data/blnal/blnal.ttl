@@ -17,7 +17,7 @@
 blnal: a owl:Ontology ;
     rdfs:label "'Berliner Allerlei'-Vokabular"@de ;
     rdfs:label "'Berliner Allerlei' Vocabulary (Berlin Assortment)"@en ;
-    rdfs:comment """Ein Vokabular unzusammenhängender Klassen, Properties und anderer Terminologie für Linked Open Data der Berliner Verwaltung. Die Terme haben werder inhaltlich nicht in ein anderes Vokabular gepasst, noch ein jeweils eigenes Vokabular gerechtfertigt."""@de ;
+    rdfs:comment """Ein Vokabular unzusammenhängender Klassen, Properties und anderer Terminologie für Linked Open Data der Berliner Verwaltung. Die Terme haben weder inhaltlich in ein anderes Vokabular gepasst, noch ein jeweils eigenes Vokabular gerechtfertigt."""@de ;
     rdfs:comment """A vocabulary for disconnected classes, properties and other kinds of terminology for linked open data from the public administration of Berlin. Each of the terms did neither fit thematically into another existing vocabulary, nor did the warrant a new vocabular on their own."""@en ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/blnal/blnal.ttl> ;
     void:feature swformats:Turtle ;
