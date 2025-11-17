@@ -1,0 +1,15 @@
+@prefix lorunits: <https://berlin.github.io/lod-vocabulary/lorunits/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+lorunits: void:classPartition [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 5 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1 ] .
+
+

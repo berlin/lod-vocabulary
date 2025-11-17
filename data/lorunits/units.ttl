@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo:  <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix swformats: <https://www.w3.org/ns/formats/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix unit: <https://berlin.github.io/lod-vocabulary/lorunits/> .
+
+# LOR Units
+
+unit: a owl:Ontology ;
+    rdfs:label "LOR-Einheiten-Vokabular"@de ;
+    rdfs:label "LOR Unit Vocabulary"@en ;
+    rdfs:comment """Ein einfaches Vokabular zur Beschreibung von Einheiten der
+    'Lebensweltlich orientierten Räume' (LOR), einer räumlichen Gliederung zur 'Planung, Prognose
+    und Beobachtung demografischer und sozialer Entwicklungen in Berlin'."""@de ;
+    rdfs:comment """A simple vocabulary for describing units of the 'Lebensweltlich orientierten Räume'
+    (LOR), a geographic breakdown of Berlin for the purpose of planning, prognosis and observation of
+    demographic and social developments."""@en ;
+    void:feature swformats:Turtle ;
+    dcterms:created "2023-03-28"^^xsd:date ;
+    dcterms:modified "2025-11-17"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    owl:versionInfo "0.1.0" ;
+    void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/lorunits/units.ttl> ;
+.
+
+unit:LOR_Unit a owl:Class ;
+    rdfs:label "LOR Unit"@en ;
+    rdfs:label "LOR-Einheit"@de ;
+    rdfs:comment """A unit of the 'Lebensweltlich orientierten Räume' (LOR), 
+    a geographic breakdown of Berlin for the purpose of planning, prognosis and observation of
+    demographic and social developments."""@en ;
+    rdfs:comment """Eine Einheit der 'Lebensweltlich orientierten Räume' (LOR), 
+    einer räumlichen Gliederung zur 'Planung, Prognose und Beobachtung demografischer 
+    und sozialer Entwicklungen in Berlin'."""@de ;
+    schema:subjectOf <https://www.berlin.de/sen/sbw/stadtdaten/stadtwissen/sozialraumorientierte-planungsgrundlagen/lebensweltlich-orientierte-raeume/> ;
+    rdfs:subClassOf schema:AdministrativeArea ;
+    rdfs:subClassOf geo:Feature ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:Bezirk a owl:Class ;
+    rdfs:subClassOf unit:LOR_Unit ;
+    rdfs:label "District"@en ;
+    rdfs:label "Bezirk"@de ;
+    unit:acronym "bez" ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:Prognoseraum a owl:Class ;
+    rdfs:subClassOf unit:LOR_Unit ;
+    rdfs:label "Prognoseraum"@de ;
+    unit:acronym "pgr" ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:Bezirksregion a owl:Class ;
+    rdfs:subClassOf unit:LOR_Unit ;
+    rdfs:label "Bezirksregion"@de ;
+    unit:acronym "bzr" ;
+    rdfs:isDefinedBy unit: ;
+.
+
+unit:Planungsraum a owl:Class ;
+    rdfs:subClassOf unit:LOR_Unit ;
+    rdfs:label "Planungsraum"@de ;
+    unit:acronym "plr" ;
+    rdfs:isDefinedBy unit: ;
+.
+
+# Properties
+
+unit:lorCode a owl:DatatypeProperty ;
+    rdfs:label "LOR code"@en ;
+    rdfs:label "LOR Code"@de ;
+    rdfs:isDefinedBy unit: ;
+    rdfs:domain unit:LOR_Unit ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf schema:identifier ;
+.
+
+unit:acronym a owl:AnnotationProperty ;
+    rdfs:label "Acronym"@en ;
+    rdfs:label "Acronym"@de ;
+    rdfs:isDefinedBy unit: ;
+.

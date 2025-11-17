@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix lodvocab: <https://berlin.github.io/lod-vocabulary/> .
+@prefix lorunits: <https://berlin.github.io/lod-vocabulary/lorunits/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -15,5 +16,5 @@ lodvocab: a void:Dataset ;
     dcterms:modified "2025-11-13"^^xsd:date ;
     dcterms:title "Berliner LOD-Vokabulare"@de,
         "Berlin LOD vocabularies"@en ;
-    void:vocabulary berorgs: ;
+    void:vocabulary berorgs: , lorunits: ;
     foaf:homepage <https://github.com/berlin/lod-vocabulary> .

@@ -2,6 +2,12 @@
 
 ## Development
 
+## [0.1.1](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.1)
+
+_(2025-11-17)_
+
+- Add [LOR Units vocabulary](https://berlin.github.io/lod-vocabulary/lorunits/)
+
 ## [0.1.0](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.0)
 
 _(2025-11-13)_
