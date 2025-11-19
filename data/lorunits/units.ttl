@@ -80,7 +80,7 @@ unit:Planungsraum a owl:Class ;
 
 unit:lorCode a owl:DatatypeProperty ;
     rdfs:label "LOR code"@en ;
-    rdfs:label "LOR Code"@de ;
+    rdfs:label "LOR-Code"@de ;
     rdfs:isDefinedBy unit: ;
     rdfs:domain unit:LOR_Unit ;
     rdfs:range xsd:string ;
