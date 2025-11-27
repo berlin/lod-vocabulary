@@ -7,6 +7,8 @@ The data was created and is maintained by hand and was published as Linked Open 
 The vocabularies contained in this repository are:
 
 * [Berlin Public Organisation Vocabulary](https://berlin.github.io/lod-vocabulary/berorgs/)
+* ['Berliner Allerlei'-Vokabular](https://berlin.github.io/lod-vocabulary/blnal/)
+* [LOR-Einheiten-Vokabular](https://berlin.github.io/lod-vocabulary/lorunits/)
 
 
 **[Start browsing the data!](https://berlin.github.io/lod-vocabulary/)**
