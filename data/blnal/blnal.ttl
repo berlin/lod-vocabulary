@@ -21,9 +21,9 @@ blnal: a owl:Ontology ;
     rdfs:comment """A vocabulary for disconnected classes, properties and other kinds of terminology for linked open data from the public administration of Berlin. Each of the terms did neither fit thematically into another existing vocabulary, nor did the warrant a new vocabular on their own."""@en ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/blnal/blnal.ttl> ;
     void:feature swformats:Turtle ;
-    dcterms:created "2025-11-17"^^xsd:date ;
+    dcterms:created "2025-11-27"^^xsd:date ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.0.2" ;
     blnal:changelog <https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md> ;
     rdfs:seeAlso <https://raw.githubusercontent.com/berlin/lod-vocabulary/refs/heads/main/data/blnal/stats.ttl> ;
 .
@@ -36,6 +36,26 @@ blnal:acronym a owl:AnnotationProperty ;
     rdfs:subPropertyOf skos:altLabel ;
     rdfs:isDefinedBy blnal: ;
     rdfs:seeAlso <https://github.com/berlinonline/lod-berlin-lor/blob/with_vocab/data/vocab/units.ttl#L80> ;
+.
+
+blnal:includesPersonalData a owl:DatatypeProperty ;
+    rdfs:label "personenbezogene Daten"@de ;
+    rdfs:label "personal data"@en ;
+    rdfs:comment "Zeigt an, dass die Primärdaten eines Datensatzes personenbezogene Daten enthalten."@de ;
+    rdfs:comment "Indicates that the primary data of a dataset contains personal data."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy blnal: ;
+.
+
+blnal:personalDataExemption a owl:DatatypeProperty ;
+    rdfs:label "Bereitstellung personenbezogener Daten aufgrund eines Gesetzes"@de ;
+    rdfs:label "Publication of personal data because of specific laws"@en ;
+    rdfs:comment "Daten mit Personenbezug dürfen standardmäßig nicht als offene Daten veröffentlicht werden. Es gibt allerdings in bestimmten Fällen Gesetze oder andere Regelungen, die die Veröffentlichung trotzdem erlauben bzw. erfordern. Diese Property zeigt an, dass dies für einen Datensatz zutrifft-"@de ;
+    rdfs:comment "By default personal data must not be published as open data. However, in some cases there are laws that allow or demand the publication of personal data. This property indicates that this is the case for a dataset."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:boolean ;
+    rdfs:isDefinedBy blnal: ;
 .
 
 blnal:dataAnonmized a owl:DatatypeProperty ;
