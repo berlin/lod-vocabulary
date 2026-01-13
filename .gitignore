@@ -3,6 +3,7 @@ _site/
 .vscode
 venv/
 lib/
+material/
 
 assets/berlin.lod.basetheme
 assets/berlin.lod.vocabtheme

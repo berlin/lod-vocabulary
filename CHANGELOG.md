@@ -2,11 +2,17 @@
 
 ## Development
 
+## [0.1.3](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.3)
+
+_(2026-01-13)_
+
+- Update [Berliner Allerlei vocabulary](https://berlin.github.io/lod-vocabulary/blnal/) with [blnal:egovg](https://berlin.github.io/lod-vocabulary/blnal/egovg). -> https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md#003
+
 ## [0.1.2](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.2)
 
 _(2025-11-27)_
 
-- Update [Berliner Allerlei vocabulary](https://berlin.github.io/lod-vocabulary/blnal/) with `blnal:includesPersonalData` and `blnal:personalDataExemption`.
+- Update [Berliner Allerlei vocabulary](https://berlin.github.io/lod-vocabulary/blnal/) with `blnal:includesPersonalData` and `blnal:personalDataExemption`. -> https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md#002
 
 ## [0.1.1](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.1)
 

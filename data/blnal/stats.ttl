@@ -3,13 +3,15 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-blnal: void:classPartition [ void:class owl:DatatypeProperty ;
-            void:entities 3 ],
-        [ void:class owl:Ontology ;
+blnal: void:classPartition [ void:class owl:ObjectProperty ;
             void:entities 1 ],
+        [ void:class <http://data.europa.eu/eli/ontology#LegalResource> ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 3 ],
         [ void:class owl:AnnotationProperty ;
             void:entities 1 ],
-        [ void:class owl:ObjectProperty ;
+        [ void:class owl:Ontology ;
             void:entities 1 ] .
 
 

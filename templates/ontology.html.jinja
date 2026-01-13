@@ -22,7 +22,7 @@
   {% set results = node | sparql_query(other_query) %}
   {% if results %}
     <div class="col-lg-4">
-      {{ voc_helper.term_list(results, title="Andere", title_properties=[SCHEMA.name, SCHEMA.description], title_languages=['de'])}}
+      {{ voc_helper.term_list(results, title="Andere", title_properties=[SCHEMA.name, SCHEMA.description, RDFS.label], title_languages=['de'])}}
     </div>
   {% endif %}
 {% endblock other_list %}

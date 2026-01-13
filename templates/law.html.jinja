@@ -1,0 +1,34 @@
+{% extends 'berlin.lod.vocabtheme/voc_base.html.jinja' %}
+
+{% set type_icon = type_icon | default('book') %}
+
+{% block info_table_content %}
+
+  {{ super() }}
+
+  {% set abbreviation = node | rdf_property_any(ELI.title_short) %}
+  {% if abbreviation %}
+    <tr>
+      <td>Abkürzung:</td>
+      <td>{{ abbreviation }}</td>
+    </tr>
+  {% endif %}
+
+  {% set altlabel = node | rdf_property_any(ELI.title_alternative) %}
+  {% if altlabel %}
+    <tr>
+      <td>Alternativer Titel:</td>
+      <td>{{ altlabel }}</td>
+    </tr>
+  {% endif %}
+
+  {% set link = node | rdf_property_any(ELI.published_in_format) %}
+  {% if link %}
+    <tr>
+      <td>Link:</td>
+      <td><a href="{{link}}" target="_blank">{{ link }}</a></td>
+    </tr>
+  {% endif %}
+
+
+{% endblock info_table_content %}

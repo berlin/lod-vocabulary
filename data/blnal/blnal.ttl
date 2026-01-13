@@ -5,6 +5,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix mdrnal: <http://publications.europa.eu/resource/authority/language/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix blnal: <https://berlin.github.io/lod-vocabulary/blnal/> .
@@ -22,8 +24,9 @@ blnal: a owl:Ontology ;
     void:dataDump <https://raw.githubusercontent.com/berlin/lod-vocabulary/main/data/blnal/blnal.ttl> ;
     void:feature swformats:Turtle ;
     dcterms:created "2025-11-27"^^xsd:date ;
+    dcterms:modified "2026-01-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    owl:versionInfo "0.0.2" ;
+    owl:versionInfo "0.0.3" ;
     blnal:changelog <https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md> ;
     rdfs:seeAlso <https://raw.githubusercontent.com/berlin/lod-vocabulary/refs/heads/main/data/blnal/stats.ttl> ;
 .
@@ -76,4 +79,17 @@ blnal:changelog a owl:ObjectProperty;
     rdfs:subPropertyOf foaf:page ;
     rdfs:isDefinedBy blnal: ;
 .
-    
+
+# EGovG Bln als eli:LegalResource
+
+blnal:egovg a eli:LegalResource ;
+    rdfs:label "E-Government-Gesetz Berlin"@de ;
+    rdfs:comment """Das „Gesetz zur Förderung des E-Government“ (E-Government-Gesetz Berlin - EGovG Bln) vom 30. Mai 2016."""@de ;
+    rdfs:isDefinedBy blnal: ;
+    eli:title "E-Government-Gesetz Berlin"@de ;
+    eli:title_short "EGovG Bln"@de ;
+    eli:title_alternative "Gesetz zur Förderung des E-Government"@de ;
+    eli:language mdrnal:DEU ;
+    eli:published_in_format <https://gesetze.berlin.de/perma?d=jlr-EGovGBErahmen> ;
+    eli:format <https://www.iana.org/assignments/media-types/text/html> ;
+.

@@ -20,6 +20,7 @@ prefixes:
   blnal: https://berlin.github.io/lod-vocabulary/blnal/
   dct: http://purl.org/dc/terms/
   dcat: http://www.w3.org/ns/dcat#
+  eli: http://data.europa.eu/eli/ontology#
   foaf: http://xmlns.com/foaf/0.1/
   hh: https://okfde.github.io/lod-budget-vocab/
   lodsg: https://berlinonline.github.io/lod-sg/
@@ -54,7 +55,7 @@ class_template_mappings:
   "owl:DatatypeProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "owl:ObjectProperty": "berlin.lod.vocabtheme/voc_property.html.jinja"
   "org:Role": "role.html.jinja"
-
+  "eli:LegalResource": "law.html.jinja"
 
 themes:
   - berlin.lod.basetheme
