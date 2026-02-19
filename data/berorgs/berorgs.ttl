@@ -50,6 +50,80 @@ berorgs:contains a owl:ObjectProperty ;
     rdfs:isDefinedBy berorgs: ;
 .
 
+# Positionsstatus
+
+bundorgs:positionsstatus a owl:ObjectProperty ;
+  rdfs:label "Positionsstatus"@de ;
+  rdfs:label "post status"@en ;
+  rdfs:comment "Formale Kennzeichnung des Besetzungs- bzw. Vertretungsstatus einer Position (org:Post)."@de ;
+  rdfs:comment "Formal indicator of the occupancy or acting/representation status of a position (org:Post)."@en ;
+  rdfs:domain org:Post ;
+  rdfs:range bundorgs:Positionsstatus ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:Positionsstatus a owl:Class ;
+  rdfs:label "Positionsstatus"@de ;
+  rdfs:label "post status"@en ;
+  rdfs:comment "Mögliche Statuswerte für eine Position (org:Post), inkl. Vertretungs-/Wahrnehmungsarten."@de ;
+  rdfs:comment "Possible status values for a post (org:Post), including acting/representation modes."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:Unbesetzt a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "unbesetzt"@de ;
+  rdfs:label "vacant"@en ;
+  rdfs:comment "Die Position ist derzeit nicht besetzt."@de ;
+  rdfs:comment "The position is currently not occupied."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:Gesperrt a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "gesperrt"@de ;
+  rdfs:label "frozen"@en ;
+  rdfs:comment "Die Position ist derzeit gesperrt und darf nicht besetzt werden, z. B. aufgrund einer Haushaltssperre oder einer organisatorischen Entscheidung."@de ;
+  rdfs:comment "The post is currently frozen and must not be filled, e.g. due to a budgetary freeze or an organisational decision."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:Geplant a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "geplant"@de ;
+  rdfs:label "planned"@en ;
+  rdfs:comment "Die Position ist vorgesehen, aber noch nicht eingerichtet oder noch nicht wirksam."@de ;
+  rdfs:comment "The post is planned but not yet established or effective."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:VertretenDurchAnsprechperson a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "durch Ansprechperson vertreten"@de ;
+  rdfs:label "represented by a contact person"@en ;
+  rdfs:comment "Die Position ist nicht regulär besetzt; Aufgaben werden bis auf Weiteres durch eine benannte Ansprechperson wahrgenommen."@de ;
+  rdfs:comment "The post is not regularly occupied; duties are fulfilled by a designated contact person until further notice."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:KommissarischWahrgenommen a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "kommissarisch wahrgenommen"@de ;
+  rdfs:label "acting"@en ;
+  rdfs:comment "Die Aufgaben der Position werden kommissarisch wahrgenommen."@de ;
+  rdfs:comment "The duties of the post are fulfilled on an acting basis."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
+bundorgs:StellvertretendWahrgenommen a owl:Class ;
+  rdfs:subClassOf bundorgs:Positionsstatus ;
+  rdfs:label "stellvertretend wahrgenommen"@de ;
+  rdfs:label "fulfilled in a deputy/substitute capacity"@en ;
+  rdfs:comment "Die Aufgaben der Position werden stellvertretend wahrgenommen."@de ;
+  rdfs:comment "The duties of the post are fulfilled in a deputy/substitute capacity."@en ;
+  rdfs:isDefinedBy bundorgs: ;
+.
+
 # Organization Types
 
 berorgs:Senatsverwaltung a owl:Class ;
