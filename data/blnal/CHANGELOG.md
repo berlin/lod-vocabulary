@@ -2,6 +2,12 @@
 
 ## Development
 
+## [0.0.4](https://github.com/berlin/lod-vocabulary/blob/blnal_0.0.4/data/blnal/blnal.ttl)
+
+_(2026-07-01)_
+
+- Add `blnal:ImprintPage` (moved here from the [lod-sg](https://github.com/berlinonline/lod-sg) vocabulary).
+
 ## [0.0.3](https://github.com/berlin/lod-vocabulary/blob/blnal_0.0.3/data/blnal/blnal.ttl)
 
 _(2026-01-13)_

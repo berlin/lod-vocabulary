@@ -2,6 +2,12 @@
 
 ## Development
 
+## [0.1.4](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.4)
+
+_(2026-07-01)_
+
+- Update [Berliner Allerlei vocabulary](https://berlin.github.io/lod-vocabulary/blnal/) with [blnal:ImprintPage](https://berlin.github.io/lod-vocabulary/blnal/ImprintPage). -> https://github.com/berlin/lod-vocabulary/blob/main/data/blnal/CHANGELOG.md#004
+
 ## [0.1.3](https://github.com/berlin/lod-vocabulary/releases/tag/0.1.3)
 
 _(2026-01-13)_

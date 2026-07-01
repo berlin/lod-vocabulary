@@ -47,6 +47,15 @@ unit:LOR_Unit a owl:Class ;
     rdfs:isDefinedBy unit: ;
 .
 
+unit:State a owl:Class ;
+    rdfs:subClassOf unit:LOR_Unit ;
+    owl:equivalentClass schema:State ;
+    rdfs:label "State"@en ;
+    rdfs:label "Bundesland"@de ;
+    unit:acronym "land" ;
+    rdfs:isDefinedBy unit: ;
+.
+
 unit:Bezirk a owl:Class ;
     rdfs:subClassOf unit:LOR_Unit ;
     rdfs:label "District"@en ;
