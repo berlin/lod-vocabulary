@@ -87,6 +87,7 @@ blnal:ImprintPage
     rdfs:label "Imprint"@en ;
     rdfs:comment "Die Impressums-Webseite einer Website"@de ;
     rdfs:comment "A web page that shows the imprint for a site."@en ;
+    rdfs:isDefinedBy blnal: ;
 .
 
 # EGovG Bln als eli:LegalResource
